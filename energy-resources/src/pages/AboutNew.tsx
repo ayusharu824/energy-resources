@@ -12,8 +12,9 @@ import { List, ListItem, ListItemIcon } from "@mui/material";
 import CompostOutlinedIcon from "@mui/icons-material/CompostOutlined";
 import SolarPowerIcon from "@mui/icons-material/SolarPower";
 import WindPowerIcon from "@mui/icons-material/WindPower";
-import backgroundImage from "../assets/greenbackground.jpg";
+import backgroundImage from "../assets/background.jpg";
 import FloatingForm from "../components/FloatingForm";
+import HeaderNew from "../components/HeaderNew";
 
 const itemData = [
   {
@@ -45,15 +46,83 @@ const itemData = [
 export default function About() {
   return (
     <>
-      <Header />
+      <HeaderNew />
       <Box
         sx={{
-          backgroundColor: "#F5F5F5",
+          backgroundColor: "#fbffff",
           minHeight: "100vh",
-          padding: "2rem 0"
+          padding: "0 0",
         }}
       >
         {/* Hero Section */}
+        <Box
+          sx={{
+            backgroundImage: `url(${backgroundImage})`, // Replace with your image URL
+            backgroundSize: "cover", // Ensures the image covers the entire area
+            backgroundPosition: "center", // Centers the image
+            backgroundRepeat: "no-repeat", // Prevents the image from repeating
+            height: "70vh", // Full screen height
+            display: "flex", // Enables flexbox for centering text
+            justifyContent: "center", // Centers text horizontally
+            alignItems: "center", // Centers text vertically
+            color: "#ffffff", // White text color
+            textAlign: "center", // Center-align text
+            position: "relative",
+          }}
+        >
+          <Box>
+            <Typography
+              variant="h4"
+              component="h1"
+              sx={{
+                fontWeight: "200",
+                textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)", // Adds a shadow for better readability
+              }}
+            >
+              Clean Energy, Smart Future, Solar Made Simple
+            </Typography>
+            <Typography
+              variant="h6"
+              sx={{
+                marginTop: "1rem",
+                textShadow: "1px 1px 3px rgba(0, 0, 0, 0.5)", // Adds a shadow for better readability
+              }}
+            >
+              D-Sun Energy Helps Carbon Free Energy Buyers, Sellers and Financiers
+              <br/> Get Better Deal Done Faster.
+            </Typography>
+            <Button
+              variant="contained"
+              color="primary"
+              size="large"
+              sx={{
+                marginTop: "2rem",
+                padding: "0.75rem 2rem",
+                textTransform: "none",
+              }}
+            >
+              Learn More
+            </Button>
+          </Box>
+          <style>
+    {`
+      @keyframes backgroundAnimation {
+        0% {
+          background-size: 100%;
+          background-position: center;
+        }
+        50% {
+          background-size: 110%;
+          background-position: top;
+        }
+        100% {
+          background-size: 100%;
+          background-position: center;
+        }
+      }
+    `}
+  </style>
+        </Box>
         {/* About Us Section */}
         <Container
           maxWidth="lg"

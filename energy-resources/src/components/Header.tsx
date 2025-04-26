@@ -9,9 +9,9 @@ const Header: React.FC = () => {
     <AppBar
       position="static"
       sx={{
-        background: "linear-gradient(90deg,rgb(76, 147, 78),rgb(120, 228, 124),rgb(114, 219, 147),rgb(143, 216, 145),rgb(174, 224, 175))", // Updated gradient with shades of green and white
+        background: "linear-gradient(90deg,rgb(76, 147, 78),rgb(93, 164, 96),rgb(114, 219, 147),rgb(143, 216, 145),rgb(174, 224, 175))", // Updated gradient with shades of green and white
         backgroundSize: "300% 300%", // Makes the gradient larger than the container
-        animation: "flow 8s infinite", // Apply the animation
+        animation: "flow 4s infinite", // Apply the animation
       }}
     >
       <Toolbar>
