@@ -15,6 +15,7 @@ import WindPowerIcon from "@mui/icons-material/WindPower";
 import backgroundImage from "../assets/background.jpg";
 import FloatingForm from "../components/FloatingForm";
 import HeaderNew from "../components/HeaderNew";
+import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 import icon1 from "../assets/asset2.png"; // Replace with your actual file name
 import icon2 from "../assets/asset6.png"; // Replace with your actual file name
 
@@ -176,7 +177,60 @@ export default function About() {
             </Typography>
           </Box>
         </Box>
-        {/* About Us Section */}
+        <Container
+          maxWidth="lg"
+          sx={{ marginTop: "3rem", textAlign: "center" }}
+        >
+          <Typography
+            variant="h3"
+            component="h1"
+            fontWeight={600}
+            color="#1b1763"
+            gutterBottom
+          >
+            What We Do ?
+          </Typography>
+          <Typography
+            variant="body1"
+            color="textSecondary"
+            sx={{ maxWidth: "800px", margin: "0 auto", lineHeight: 1.8 }}
+          >
+            We are building India’s most accessible green energy marketplace,
+            enabling seamless adoption of renewable energy for corporate,
+            industrial, and residential consumers. Our platform simplifies the
+            journey toward an electrified, low-carbon future by bringing
+            together energy buyers, developers, and financiers — all in one
+            place. Through innovative models like Group Captive, Captive, and
+            Third-Party Open Access, we make clean energy not only accessible
+            but also affordable and scalable.
+          </Typography>
+          <Box
+            sx={{
+              marginTop: "2rem",
+              display: "flex",
+              justifyContent: "center",
+              gap: 2,
+            }}
+          >
+            <Button
+              variant="contained"
+              color="primary"
+              size="large"
+              sx={{ textTransform: "none" }}
+            >
+              Learn More
+            </Button>
+            <Button
+              variant="outlined"
+              color="primary"
+              size="large"
+              sx={{ textTransform: "none" }}
+            >
+              Contact Us
+            </Button>
+          </Box>
+        </Container>
+        {/* About Us Section
         <Container
           maxWidth="lg"
           sx={{ marginTop: "3rem", textAlign: "center" }}
@@ -226,8 +280,170 @@ export default function About() {
               Contact Us
             </Button>
           </Box>
-        </Container>
+        </Container> */}
+        <Box
+          sx={{
+            display: "flex", // Align items horizontally
+            justifyContent: "space-between", // Space out the icons
+            alignItems: "center", // Center the icons vertically
+            marginTop: "5rem", // Add spacing above the icons
+            padding: "0 12%",
+          }}
+        >
+          <Box sx={{ textAlign: "center" }}>
+            <SolarPowerIcon
+              color="success"
+              fontSize="large"
+              sx={{ height: "2em", width: "2em" }}
+            />
+            <Typography
+              variant="h6"
+              sx={{
+                marginTop: "1rem", // Add spacing between the icon and text
+                fontWeight: "500",
+                color: "rgba(0, 0, 0, 0.6)", // Text color
+              }}
+            >
+              For Consumers
+            </Typography>
+          </Box>
+          <Box sx={{ textAlign: "center" }}>
+            <WindPowerIcon
+              color="success"
+              fontSize="large"
+              sx={{ height: "2em", width: "2em" }}
+            />
+            <Typography
+              variant="h6"
+              sx={{
+                marginTop: "1rem", // Add spacing between the icon and text
+                fontWeight: "500",
+                color: "rgba(0, 0, 0, 0.6)", // Text color
+              }}
+            >
+              For Developers
+            </Typography>
+          </Box>
+          <Box sx={{ textAlign: "center" }}>
+            <MonetizationOnIcon
+              color="success"
+              fontSize="large"
+              sx={{ height: "2em", width: "2em" }}
+            />
+            <Typography
+              variant="h6"
+              sx={{
+                marginTop: "1rem", // Add spacing between the icon and text
+                fontWeight: "500",
+                color: "rgba(0, 0, 0, 0.6)", // Text color
+              }}
+            >
+              For Financiers
+            </Typography>
+          </Box>
+        </Box>
         {/* Horizontal Scrollable Image Grid */}
+
+        <Box
+          maxWidth="lg"
+          sx={{ marginTop: "3rem", textAlign: "left", padding: "0 1.3em" }}
+        >
+          <Typography
+            variant="h4"
+            component="h1"
+            fontWeight={600}
+            color="#1b1763"
+            gutterBottom
+          >
+            1. For Consumers
+          </Typography>
+          <Typography
+            variant="body1"
+            color="textSecondary"
+            sx={{
+              lineHeight: 1.7,
+              fontFamily: "'Merriweather', serif", // Use a formal serif font
+              fontSize: "1.2rem", // Slightly increase the font size
+              fontWeight: 500, // Add a normal font weight for a formal look
+              letterSpacing: "0.02em", // Add slight letter spacing for readability
+              textAlign: "justify", // Justify the text for a clean, formal layout
+              margin: "0 auto", // Center the text block
+            }}
+          >
+            Group Captive Energy Access We aggregate multiple commercial and
+            industrial (C&I) energy consumers by state and discom. Based on
+            their collective demand: We match them with suitable developers who
+            can onboard them into an upcoming or newly developed group captive
+            solar/wind plant. Consumers benefit from reduced tariffs and avoid
+            upfront capex. This enables faster compliance with
+            RPO and ESG goals.
+          </Typography>
+        </Box>
+        <Box
+          maxWidth="lg"
+          sx={{ marginTop: "3rem", textAlign: "left", padding: "0 1.3em" }}
+        >
+          <Typography
+            variant="h4"
+            component="h1"
+            fontWeight={600}
+            color="#1b1763"
+            gutterBottom
+          >
+            2. For Developers
+          </Typography>
+          <Typography
+            variant="body1"
+            color="textSecondary"
+            sx={{
+              lineHeight: 1.7,
+              fontFamily: "'Merriweather', serif", // Use a formal serif font
+              fontSize: "1.2rem", // Slightly increase the font size
+              fontWeight: 500, // Add a normal font weight for a formal look
+              letterSpacing: "0.02em", // Add slight letter spacing for readability
+              textAlign: "justify", // Justify the text for a clean, formal layout
+              margin: "0 auto", // Center the text block
+            }}
+          >
+            Project Listing & Faster Group Formation We offer developers a
+            marketplace to: List their group captive or third-party open access
+            projects. Get matched with qualified energy consumers, reducing lead
+            times and improving project bankability. Ensure faster group
+            closures and plant utilization rates.
+          </Typography>
+        </Box>
+        <Box
+          maxWidth="lg"
+          sx={{ marginTop: "3rem", textAlign: "left", padding: "0 1.3em" }}
+        >
+          <Typography
+            variant="h4"
+            component="h1"
+            fontWeight={600}
+            color="#1b1763"
+            gutterBottom
+          >
+            3. For Financiers
+          </Typography>
+          <Typography
+            variant="body1"
+            color="textSecondary"
+            sx={{
+              lineHeight: 1.7,
+              fontFamily: "'Merriweather', serif", // Use a formal serif font
+              fontSize: "1.2rem", // Slightly increase the font size
+              fontWeight: 500, // Add a normal font weight for a formal look
+              letterSpacing: "0.02em", // Add slight letter spacing for readability
+              textAlign: "justify", // Justify the text for a clean, formal layout
+              margin: "0 auto", // Center the text block
+            }}
+          >
+            Investment-Ready Green Projects We connect institutional and private
+            financiers with developers seeking funding for: New or
+            expansion-stage green energy projects Verified, consumer-backed
+            demand pipelines Transparent data and ROI estimates
+          </Typography>
+        </Box>
         <Container maxWidth="xl" sx={{ marginTop: "3rem" }}>
           <Typography variant="h4" gutterBottom>
             Our Gallery
