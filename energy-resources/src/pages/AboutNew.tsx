@@ -15,6 +15,8 @@ import WindPowerIcon from "@mui/icons-material/WindPower";
 import backgroundImage from "../assets/background.jpg";
 import FloatingForm from "../components/FloatingForm";
 import HeaderNew from "../components/HeaderNew";
+import icon1 from "../assets/asset2.png"; // Replace with your actual file name
+import icon2 from "../assets/asset6.png"; // Replace with your actual file name
 
 const itemData = [
   {
@@ -88,8 +90,9 @@ export default function About() {
                 textShadow: "1px 1px 3px rgba(0, 0, 0, 0.5)", // Adds a shadow for better readability
               }}
             >
-              D-Sun Energy Helps Carbon Free Energy Buyers, Sellers and Financiers
-              <br/> Get Better Deal Done Faster.
+              D-Sun Energy Helps Carbon Free Energy Buyers, Sellers and
+              Financiers
+              <br /> Get Better Deal Done Faster.
             </Typography>
             <Button
               variant="contained"
@@ -105,7 +108,7 @@ export default function About() {
             </Button>
           </Box>
           <style>
-    {`
+            {`
       @keyframes backgroundAnimation {
         0% {
           background-size: 100%;
@@ -121,7 +124,57 @@ export default function About() {
         }
       }
     `}
-  </style>
+          </style>
+        </Box>
+        <Box
+          sx={{
+            display: "flex", // Align items horizontally
+            justifyContent: "space-between", // Space out the icons
+            alignItems: "center", // Center the icons vertically
+            marginTop: "5rem", // Add spacing above the icons
+            padding: "0 12%",
+          }}
+        >
+          <Box sx={{ textAlign: "center" }}>
+            <img
+              src={icon1}
+              alt="Icon 1"
+              style={{
+                width: "125px", // Set the width of the icon
+                height: "150px", // Set the height of the icon
+              }}
+            />
+            <Typography
+              variant="h6"
+              sx={{
+                marginTop: "1rem", // Add spacing between the icon and text
+                fontWeight: "500",
+                color: "rgba(0, 0, 0, 0.6)", // Text color
+              }}
+            >
+              Accelerating Connections
+            </Typography>
+          </Box>
+          <Box sx={{ textAlign: "center" }}>
+            <img
+              src={icon2}
+              alt="Icon 2"
+              style={{
+                width: "150px", // Set the width of the icon
+                height: "150px", // Set the height of the icon
+              }}
+            />
+            <Typography
+              variant="h6"
+              sx={{
+                marginTop: "1rem", // Add spacing between the icon and text
+                fontWeight: "500",
+                color: "rgba(0, 0, 0, 0.6)", // Text color
+              }}
+            >
+              Accelerating Decisions
+            </Typography>
+          </Box>
         </Box>
         {/* About Us Section */}
         <Container
