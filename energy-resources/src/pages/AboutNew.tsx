@@ -1,13 +1,5 @@
-import {
-  Box,
-  Typography,
-  ImageList,
-  ImageListItem,
-  Button,
-  Container,
-  Grid,
-} from "@mui/material";
-import Header from "../components/Header";
+import { Box, Typography, Button, Container, Grid } from "@mui/material";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import { List, ListItem, ListItemIcon } from "@mui/material";
 import CompostOutlinedIcon from "@mui/icons-material/CompostOutlined";
 import SolarPowerIcon from "@mui/icons-material/SolarPower";
@@ -141,8 +133,8 @@ export default function About() {
               src={icon1}
               alt="Icon 1"
               style={{
-                width: "125px", // Set the width of the icon
-                height: "150px", // Set the height of the icon
+                width: "100px", // Set the width of the icon
+                height: "100px", // Set the height of the icon
               }}
             />
             <Typography
@@ -153,7 +145,22 @@ export default function About() {
                 color: "rgba(0, 0, 0, 0.6)", // Text color
               }}
             >
-              Accelerating Connections
+              Accelerate Your Green Shift
+            </Typography>
+            <Typography
+              variant="body2"
+              sx={{
+                marginTop: "0.5rem", // Add spacing between the title and description
+                fontWeight: "400",
+                color: "rgba(0, 0, 0, 0.7)", // Slightly darker text color for description
+                lineHeight: 1.6, // Improve readability
+                maxWidth: "250px", // Optional: Limit the width of the description
+                //margin: "0 auto", // Center the description text
+              }}
+            >
+              Connecting C&I consumers swiftly with captive and group captive
+              green energy solutions—cutting down the time to your first
+              green power unit.
             </Typography>
           </Box>
           <Box sx={{ textAlign: "center" }}>
@@ -161,8 +168,8 @@ export default function About() {
               src={icon2}
               alt="Icon 2"
               style={{
-                width: "150px", // Set the width of the icon
-                height: "150px", // Set the height of the icon
+                width: "100px", // Set the width of the icon
+                height: "100px", // Set the height of the icon
               }}
             />
             <Typography
@@ -173,27 +180,49 @@ export default function About() {
                 color: "rgba(0, 0, 0, 0.6)", // Text color
               }}
             >
-              Accelerating Decisions
+              Consumer-Centric Contracts
+            </Typography>
+            <Typography
+              variant="body2"
+              sx={{
+                marginTop: "0.5em", // Add spacing between the title and description
+                fontWeight: "400",
+                color: "rgba(0, 0, 0, 0.7)", // Slightly darker text color for description
+                lineHeight: 1.6, // Improve readability
+                maxWidth: "250px", // Optional: Limit the width of the description
+                // margin: "0 auto", // Center the description text
+              }}
+            >
+              Streamlined, easy-to-understand PPAs designed for faster,
+              hassle-free green energy adoption.
             </Typography>
           </Box>
         </Box>
-        <Container
+        {/* <Container
           maxWidth="lg"
-          sx={{ marginTop: "3rem", textAlign: "center" }}
-        >
+          //sx={{ marginTop: "3rem", textAlign: "center" }}
+        > */}
+        <Box sx={{ margin: "0 4.5em", marginTop: "3rem" }}>
           <Typography
-            variant="h3"
+            variant="h4"
             component="h1"
             fontWeight={600}
             color="#1b1763"
+            textAlign={"left"}
             gutterBottom
           >
             What We Do ?
+            <hr />
           </Typography>
           <Typography
             variant="body1"
             color="textSecondary"
-            sx={{ maxWidth: "800px", margin: "0 auto", lineHeight: 1.8 }}
+            sx={{
+              maxWidth: "800px",
+              textAlign: "left",
+              lineHeight: 1.8,
+              marginTop: "2rem",
+            }}
           >
             We are building India’s most accessible green energy marketplace,
             enabling seamless adoption of renewable energy for corporate,
@@ -204,32 +233,33 @@ export default function About() {
             Third-Party Open Access, we make clean energy not only accessible
             but also affordable and scalable.
           </Typography>
-          <Box
-            sx={{
-              marginTop: "2rem",
-              display: "flex",
-              justifyContent: "center",
-              gap: 2,
-            }}
+        </Box>
+        <Box
+          sx={{
+            marginTop: "2rem",
+            display: "flex",
+            justifyContent: "center",
+            gap: 2,
+          }}
+        >
+          <Button
+            variant="contained"
+            color="primary"
+            size="large"
+            sx={{ textTransform: "none" }}
           >
-            <Button
-              variant="contained"
-              color="primary"
-              size="large"
-              sx={{ textTransform: "none" }}
-            >
-              Learn More
-            </Button>
-            <Button
-              variant="outlined"
-              color="primary"
-              size="large"
-              sx={{ textTransform: "none" }}
-            >
-              Contact Us
-            </Button>
-          </Box>
-        </Container>
+            Learn More
+          </Button>
+          <Button
+            variant="outlined"
+            color="primary"
+            size="large"
+            sx={{ textTransform: "none" }}
+          >
+            Contact Us
+          </Button>
+        </Box>
+        {/* </Container> */}
         {/* About Us Section
         <Container
           maxWidth="lg"
@@ -281,21 +311,35 @@ export default function About() {
             </Button>
           </Box>
         </Container> */}
+        <Typography
+          variant="h4"
+          component="h1"
+          fontWeight={600}
+          color="#1b1763"
+          textAlign={"left"}
+          margin={"0 2em"}
+          gutterBottom
+        >
+          Solutions
+          <hr />
+        </Typography>
         <Box
           sx={{
             display: "flex", // Align items horizontally
             justifyContent: "space-between", // Space out the icons
             alignItems: "center", // Center the icons vertically
             marginTop: "5rem", // Add spacing above the icons
-            padding: "0 12%",
+            padding: "0 20%",
           }}
         >
           <Box sx={{ textAlign: "center" }}>
+          <Link to="/consumers" style={{ textDecoration: "none" }}>
             <SolarPowerIcon
               color="success"
               fontSize="large"
               sx={{ height: "2em", width: "2em" }}
             />
+            
             <Typography
               variant="h6"
               sx={{
@@ -304,8 +348,9 @@ export default function About() {
                 color: "rgba(0, 0, 0, 0.6)", // Text color
               }}
             >
-              For Consumers
+              Consumers
             </Typography>
+            </Link>
           </Box>
           <Box sx={{ textAlign: "center" }}>
             <WindPowerIcon
@@ -321,7 +366,7 @@ export default function About() {
                 color: "rgba(0, 0, 0, 0.6)", // Text color
               }}
             >
-              For Developers
+              Developers
             </Typography>
           </Box>
           <Box sx={{ textAlign: "center" }}>
@@ -338,7 +383,7 @@ export default function About() {
                 color: "rgba(0, 0, 0, 0.6)", // Text color
               }}
             >
-              For Financiers
+              Financiers
             </Typography>
           </Box>
         </Box>

@@ -1,17 +1,18 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-import About from './pages/About';
-import AboutNew from './pages/AboutNew';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import About from "./pages/About";
+import AboutNew from "./pages/AboutNew";
+import Consumers from "./pages/Consumers";
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#4CAF50', // Green
+      main: "#4CAF50", // Green
     },
     background: {
-      default: '#fbffff', // White
+      default: "#fbffff", // White
     },
   },
 });
@@ -22,10 +23,11 @@ const App: React.FC = () => {
       <CssBaseline />
       <Router>
         <Routes>
+          {/* Default route */}
+          <Route path="/" element={<AboutNew />} />
           <Route path="/about" element={<About />} />
-        </Routes>
-        <Routes>
           <Route path="/aboutnew" element={<AboutNew />} />
+          <Route path="/consumers" element={<Consumers />} />
         </Routes>
       </Router>
     </ThemeProvider>
