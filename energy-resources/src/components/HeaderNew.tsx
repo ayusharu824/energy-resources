@@ -8,6 +8,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Link } from "react-router-dom";
 
 const HeaderNew: React.FC = () => {
   const [anchorElSolutions, setAnchorElSolutions] = React.useState<null | HTMLElement>(null);
@@ -34,6 +35,7 @@ const HeaderNew: React.FC = () => {
     >
       <Toolbar sx={{ justifyContent: "space-between" }}>
         {/* Logo */}
+        <Link to="/" style={{ textDecoration: "none" }}>
         <Typography
           variant="h6"
           component="div"
@@ -46,7 +48,9 @@ const HeaderNew: React.FC = () => {
             height="67"
           />
         </Typography>
+        </Link>
 
+        {/* Mobile Navigation Links */}
         {/* Desktop Navigation Links */}
         <Box sx={{ display: { xs: "none", md: "flex" }, gap: 3 }}>
           {/* Solutions Dropdown */}
