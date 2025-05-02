@@ -58,6 +58,62 @@ const rows = [
     "SMEs, startups, low-credit consumers.",
     "Scales group captive access without large investments."
   ),
+  createData(
+    "Deferred Equity Payment Plans",
+    "Consumer pays equity in 0–20% upfront; rest in installments over 3–5 years",
+    "From operational savings (cash flow positive).",
+    "Mid-sized corporates wanting opex-like deals.",
+    "Reduces initial cash outlay while maintaining ownership."
+  ),
+  createData(
+    "Hybrid Power Purchase Agreements",
+    "Part of the energy tariff covers consumer’s equity share amortized into the rate.",
+    "Embedded in long-term PPA pricing.",
+    "Price-sensitive consumers seeking simplicity.",
+    "Structured tariff ensures compliance + financial ease."
+  ),
+  createData(
+    "Leasing Structures / Equity Leasing",
+    "Developer owns equity; contractual/legal agreement gives consumer equity rights for compliance.",
+    "No repayment; purely legal construct.",
+    "Entities avoiding balance sheet impact.",
+    "Enables compliance without cash outlay."
+  ),
+  createData(
+    "Aggregator-Based Group Captive",
+    "Multiple small consumers pooled; aggregator negotiates with developer to front pooled 26% equity.",
+    "Shared recovery or embedded in tariff via aggregator.",
+    "SMEs, startups, low-credit consumers.",
+    "Scales group captive access without large investments."
+  ),
+  createData(
+    "Deferred Equity Payment Plans",
+    "Consumer pays equity in 0–20% upfront; rest in installments over 3–5 years",
+    "From operational savings (cash flow positive).",
+    "Mid-sized corporates wanting opex-like deals.",
+    "Reduces initial cash outlay while maintaining ownership."
+  ),
+  createData(
+    "Hybrid Power Purchase Agreements",
+    "Part of the energy tariff covers consumer’s equity share amortized into the rate.",
+    "Embedded in long-term PPA pricing.",
+    "Price-sensitive consumers seeking simplicity.",
+    "Structured tariff ensures compliance + financial ease."
+  ),
+  createData(
+    "Leasing Structures / Equity Leasing",
+    "Developer owns equity; contractual/legal agreement gives consumer equity rights for compliance.",
+    "No repayment; purely legal construct.",
+    "Entities avoiding balance sheet impact.",
+    "Enables compliance without cash outlay."
+  ),
+  createData(
+    "Aggregator-Based Group Captive",
+    "Multiple small consumers pooled; aggregator negotiates with developer to front pooled 26% equity.",
+    "Shared recovery or embedded in tariff via aggregator.",
+    "SMEs, startups, low-credit consumers.",
+    "Scales group captive access without large investments."
+  ),
 ];
 
 export default function Consumers() {
@@ -107,9 +163,14 @@ export default function Consumers() {
       <Container sx={{ margin: "0 4.0em", marginTop: "3rem", height: "100vh" }}>
         <TableContainer
           component={Paper}
-          sx={{ boxShadow: 3, borderRadius: 2 }}
+          sx={{
+            boxShadow: 3,
+            borderRadius: 2,
+            maxHeight: "500px", // Set a fixed height for the table container
+            overflowY: "auto", // Enable vertical scrolling
+          }}
         >
-          <Table sx={{ minWidth: 650 }} aria-label="styled table">
+          <Table sx={{ minWidth: 650 }} stickyHeader aria-label="sticky table">
             <TableHead>
               <TableRow>
                 <TableCell
