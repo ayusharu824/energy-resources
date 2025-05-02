@@ -9,6 +9,7 @@ import MenuItem from "@mui/material/MenuItem";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
+import mainLogo from "../assets/mainLogo.png"; // Adjust the path based on your folder structure
 
 const HeaderNew: React.FC = () => {
   const [anchorElSolutions, setAnchorElSolutions] = React.useState<null | HTMLElement>(null);
@@ -42,7 +43,7 @@ const HeaderNew: React.FC = () => {
           sx={{ fontWeight: "bold", color: "#4CAF50" }}
         >
           <img
-            src="https://cdn.prod.website-files.com/5f9c624f18a34099c088258c/619c1c1c775fd3b1b06ee794_LTE_Logo_-light-2color.png"
+            src={mainLogo}
             alt="LevelTen Energy Logo"
             width="130"
             height="67"

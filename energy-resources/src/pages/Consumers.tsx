@@ -160,7 +160,7 @@ export default function Consumers() {
           Here are the most common and practical solutions being offered:
         </Typography>
       </Box>
-      <Container sx={{ margin: "0 4.0em", marginTop: "3rem", height: "100vh" }}>
+      <Container sx={{ margin: "0 4.0em", marginTop: "3rem" }}>
         <TableContainer
           component={Paper}
           sx={{
@@ -275,6 +275,51 @@ export default function Consumers() {
           </Table>
         </TableContainer>
       </Container>
+      <Box sx={{ margin: "0 4.5em", marginTop: "3rem", marginBottom: "10rem" }}>
+        <Typography
+          variant="h4"
+          component="h1"
+          fontWeight={600}
+          color="#1b1763"
+          textAlign={"left"}
+          gutterBottom
+        >
+          Basic Details to Ask the User
+          <hr />
+        </Typography>
+        <Typography
+          variant="body1"
+          color="textSecondary"
+          sx={{
+            maxWidth: "800px",
+            textAlign: "left",
+            lineHeight: 1.8,
+          }}
+        >
+          In your registration form, you may want to collect the following:
+        </Typography>
+        <Box
+          component="ul"
+          sx={{
+            maxWidth: "800px",
+            textAlign: "left",
+            lineHeight: 1.8,
+            marginTop: "1rem",
+            color: "#686b6a",
+            paddingLeft: "1.5rem",
+          }}
+        >
+          <li>Full Name</li>
+          <li>Company Name (if applicable)</li>
+          <li>Email Address</li>
+          <li>Phone Number</li>
+          <li>Monthly Electricity Consumption (in kWh)</li>
+          <li>Electricity Bill Amount (monthly average)</li>
+          <li>State & City</li>
+          <li>Type of Electricity Connection (Commercial / Industrial)</li>
+          <li>Upload Recent Electricity Bill (optional)</li>
+        </Box>
+      </Box>
     </>
   );
 }

@@ -28,6 +28,7 @@ const App: React.FC = () => {
           <Route path="/about" element={<About />} />
           <Route path="/aboutnew" element={<AboutNew />} />
           <Route path="/consumers" element={<Consumers />} />
+          <Route path="*" element={<AboutNew />} />
         </Routes>
       </Router>
     </ThemeProvider>
