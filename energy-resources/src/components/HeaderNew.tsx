@@ -9,7 +9,7 @@ import MenuItem from "@mui/material/MenuItem";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
-import mainLogo from "../assets/mainLogo.png"; // Adjust the path based on your folder structure
+import mainLogo from "../assets/mainLogoLg.png"; // Adjust the path based on your folder structure
 
 const HeaderNew: React.FC = () => {
   const [anchorElSolutions, setAnchorElSolutions] = React.useState<null | HTMLElement>(null);
@@ -45,8 +45,8 @@ const HeaderNew: React.FC = () => {
           <img
             src={mainLogo}
             alt="LevelTen Energy Logo"
-            width="130"
-            height="67"
+            width="140"
+            height="50"
           />
         </Typography>
         </Link>

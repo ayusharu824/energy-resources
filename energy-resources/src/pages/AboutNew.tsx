@@ -202,63 +202,6 @@ export default function About() {
           maxWidth="lg"
           //sx={{ marginTop: "3rem", textAlign: "center" }}
         > */}
-        <Box sx={{ margin: "0 4.5em", marginTop: "3rem" }}>
-          <Typography
-            variant="h4"
-            component="h1"
-            fontWeight={600}
-            color="#1b1763"
-            textAlign={"left"}
-            gutterBottom
-          >
-            What We Do ?
-            <hr />
-          </Typography>
-          <Typography
-            variant="body1"
-            color="textSecondary"
-            sx={{
-              maxWidth: "800px",
-              textAlign: "left",
-              lineHeight: 1.8,
-              marginTop: "2rem",
-            }}
-          >
-            We are building India’s most accessible green energy marketplace,
-            enabling seamless adoption of renewable energy for corporate,
-            industrial, and residential consumers. Our platform simplifies the
-            journey toward an electrified, low-carbon future by bringing
-            together energy buyers, developers, and financiers — all in one
-            place. Through innovative models like Group Captive, Captive, and
-            Third-Party Open Access, we make clean energy not only accessible
-            but also affordable and scalable.
-          </Typography>
-        </Box>
-        <Box
-          sx={{
-            marginTop: "2rem",
-            display: "flex",
-            justifyContent: "center",
-            gap: 2,
-          }}
-        >
-          <Button
-            variant="contained"
-            color="primary"
-            size="large"
-            sx={{ textTransform: "none" }}
-          >
-            Learn More
-          </Button>
-          <Button
-            variant="outlined"
-            color="primary"
-            size="large"
-            sx={{ textTransform: "none" }}
-          >
-            Contact Us
-          </Button>
-        </Box>
         {/* </Container> */}
         {/* About Us Section
         <Container
@@ -387,8 +330,66 @@ export default function About() {
             </Typography>
           </Box>
         </Box>
+
+        <Box sx={{ margin: "0 4.5em", marginTop: "3rem" }}>
+          <Typography
+            variant="h4"
+            component="h1"
+            fontWeight={600}
+            color="#1b1763"
+            textAlign={"left"}
+            gutterBottom
+          >
+            What We Do ?
+            <hr />
+          </Typography>
+          <Typography
+            variant="body1"
+            color="textSecondary"
+            sx={{
+              maxWidth: "800px",
+              textAlign: "left",
+              lineHeight: 1.8,
+              marginTop: "2rem",
+            }}
+          >
+            We are building India’s most accessible green energy marketplace,
+            enabling seamless adoption of renewable energy for corporate,
+            industrial, and residential consumers. Our platform simplifies the
+            journey toward an electrified, low-carbon future by bringing
+            together energy buyers, developers, and financiers — all in one
+            place. Through innovative models like Group Captive, Captive, and
+            Third-Party Open Access, we make clean energy not only accessible
+            but also affordable and scalable.
+          </Typography>
+        </Box>
+        <Box
+          sx={{
+            marginTop: "2rem",
+            display: "flex",
+            justifyContent: "center",
+            gap: 2,
+          }}
+        >
+          <Button
+            variant="contained"
+            color="primary"
+            size="large"
+            sx={{ textTransform: "none" }}
+          >
+            Learn More
+          </Button>
+          <Button
+            variant="outlined"
+            color="primary"
+            size="large"
+            sx={{ textTransform: "none" }}
+          >
+            Contact Us
+          </Button>
+        </Box>
         {/* Horizontal Scrollable Image Grid */}
-        <Container maxWidth="xl" sx={{ marginTop: "3rem" }}>
+        {/* <Container maxWidth="xl" sx={{ marginTop: "3rem" }}>
           <Typography variant="h4" gutterBottom>
             Our Gallery
           </Typography>
@@ -424,9 +425,9 @@ export default function About() {
               </Box>
             ))}
           </Box>
-        </Container>
+        </Container> */}
 
-        <Container maxWidth="lg" sx={{ marginTop: "3rem" }}>
+        {/* <Container maxWidth="lg" sx={{ marginTop: "3rem" }}>
           <Typography
             variant="h4"
             color="#1b1763"
@@ -437,11 +438,8 @@ export default function About() {
             Electrify your home with EnergySage
           </Typography>
 
-          {/* Grid Layout */}
           <Grid container spacing={4} sx={{ marginTop: "2rem" }}>
-            {/* Left Column: List */}
             <Grid size={6}>
-              {/* <Item> */}
               <List>
                 <ListItem alignItems="flex-start">
                   <ListItemIcon>
@@ -488,10 +486,8 @@ export default function About() {
                   </Box>
                 </ListItem>
               </List>
-              {/* </Item> */}
             </Grid>
 
-            {/* Right Column: Additional Content */}
             <Grid size={{ xs: 6, md: 6 }}>
               <Box
                 sx={{
@@ -501,14 +497,13 @@ export default function About() {
                   alignItems: "center",
                   backgroundColor: "#F5F5F5",
                   borderRadius: 2,
-                  //boxShadow: 3,
                   padding: 2,
                 }}
               >
                 <iframe
                   width="100%"
                   height="315"
-                  src="https://www.youtube.com/embed/E39neWnw9AA" // Replace with your YouTube video URL
+                  src="https://www.youtube.com/embed/E39neWnw9AA" 
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -517,10 +512,10 @@ export default function About() {
               </Box>
             </Grid>
           </Grid>
-        </Container>
+        </Container> */}
 
-        {/* Call-to-Action Section */}
-        <Box textAlign="center" sx={{ marginTop: "4rem" }}>
+       
+        {/* <Box textAlign="center" sx={{ marginTop: "4rem" }}>
           <Typography variant="h4" component="p" gutterBottom>
             Ready to make a difference?
           </Typography>
@@ -537,7 +532,7 @@ export default function About() {
             Get Started
           </Button>
           <FloatingForm />
-        </Box>
+        </Box> */}
       </Box>
     </>
   );
