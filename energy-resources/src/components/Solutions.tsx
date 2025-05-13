@@ -19,7 +19,7 @@ const Solutions = () => {
         margin={"2em 0 1.5em 0"}
         gutterBottom
       >
-        Solutions
+        Our Solutions
       </Typography>
 
       <Card
@@ -33,104 +33,6 @@ const Solutions = () => {
           mb: 6,
         }}
       >
-        {/* <Grid container spacing={4}>
-          <Grid size={{ xs: 12, md: 8, lg: 8 }}>
-            <Grid container alignItems="center" spacing={2}>
-              <Grid>
-                <Link to="/consumers" style={{ textDecoration: "none" }}>
-                  <SolarPowerIcon
-                    color="success"
-                    fontSize="large"
-                    sx={{ height: "2.5em", width: "2.5em" }}
-                  />
-                </Link>
-              </Grid>
-              <Grid>
-                <Typography
-                  variant="h6"
-                  sx={{
-                    fontWeight: "600",
-                    color: "#1b1763",
-                  }}
-                >
-                  Consumers
-                </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    color: "rgba(0, 0, 0, 0.7)",
-                  }}
-                >
-                  Connecting C&I consumers swiftly with captive and group
-                  captive green energy solutions.
-                </Typography>
-              </Grid>
-            </Grid>
-          </Grid>
-          <Grid size={{ xs: 12, md: 4 }}>
-            <Grid container alignItems="center" spacing={2}>
-              <Grid>
-                <WindPowerIcon
-                  color="success"
-                  fontSize="large"
-                  sx={{ height: "2.5em", width: "2.5em" }}
-                />
-              </Grid>
-              <Grid>
-                <Typography
-                  variant="h6"
-                  sx={{
-                    fontWeight: "600",
-                    color: "#1b1763",
-                  }}
-                >
-                  Developers
-                </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    color: "rgba(0, 0, 0, 0.7)",
-                  }}
-                >
-                  Streamlined onboarding for developers to connect projects with
-                  buyers.
-                </Typography>
-              </Grid>
-            </Grid>
-          </Grid>
-          <Grid size =  {{xs:12,md:4}}>
-            <Grid container alignItems="center" spacing={2}>
-              <Grid>
-                <MonetizationOnIcon
-                  color="success"
-                  fontSize="large"
-                  sx={{ height: "2.5em", width: "2.5em" }}
-                />
-              </Grid>
-              <Grid>
-                <Typography
-                  variant="h6"
-                  sx={{
-                    fontWeight: "600",
-                    color: "#1b1763",
-                  }}
-                >
-                  Financiers
-                </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    color: "rgba(0, 0, 0, 0.7)",
-                  }}
-                >
-                  Enabling financiers to invest in renewable energy projects
-                  with ease.
-                </Typography>
-              </Grid>
-            </Grid>
-          </Grid>
-        </Grid> */}
-
         <Grid container spacing={4}>
           <Grid size={6}>
             <Typography
