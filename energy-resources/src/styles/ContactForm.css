@@ -1,0 +1,25 @@
+.modern-form-container {
+  padding: 40px 30px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.form-title {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.submit-btn {
+  background: linear-gradient(90deg, #4caf50, #81c784);
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(90deg, #43a047, #66bb6a);
+}
