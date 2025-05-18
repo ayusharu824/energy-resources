@@ -28,10 +28,10 @@ const HeaderNew: React.FC = () => {
     <AppBar
       position="static"
       sx={{
-        backgroundColor: "#ffffff", // White background
-        color: "#000000", // Black text
+        backgroundColor: "transparent", // White background
+        color: "#ffffff", // Black text
         boxShadow: "none", // Remove default shadow
-        borderBottom: "1px solid #e0e0e0", // Add a subtle border
+        //borderBottom: "1px solid #e0e0e0", // Add a subtle border
       }}
     >
       <Toolbar sx={{ justifyContent: "space-between" }}>
@@ -40,7 +40,7 @@ const HeaderNew: React.FC = () => {
         <Typography
           variant="h6"
           component="div"
-          sx={{ fontWeight: "bold", color: "#4CAF50" }}
+          sx={{ fontWeight: "bold", color: "#ffffff" }}
         >
           <img
             src={mainLogo}
@@ -57,7 +57,7 @@ const HeaderNew: React.FC = () => {
           {/* Solutions Dropdown */}
           <Button
             color="inherit"
-            sx={{ textTransform: "none",color: "#3f6d8f",fontFamily: "Lato, sans-serif",fontWeight: "400",fontSize: "1rem" }}
+            sx={{ textTransform: "none",color: "#ffffff",fontFamily: "Lato, sans-serif",fontWeight: "400",fontSize: "1rem" }}
             onClick={handleMenuOpen(setAnchorElSolutions)}
 
           >
@@ -77,7 +77,7 @@ const HeaderNew: React.FC = () => {
           {/* Platform Dropdown */}
           <Button
             color="inherit"
-            sx={{ textTransform: "none",color: "#3f6d8f",fontFamily: "Lato, sans-serif",fontWeight: "400",fontSize: "1rem"}}
+            sx={{ textTransform: "none",color: "#ffffff",fontFamily: "Lato, sans-serif",fontWeight: "400",fontSize: "1rem"}}
             onClick={handleMenuOpen(setAnchorElPlatform)}
           >
             Platform
@@ -96,7 +96,7 @@ const HeaderNew: React.FC = () => {
           {/* About Dropdown */}
           <Button
             color="inherit"
-            sx={{ textTransform: "none",color: "#3f6d8f",fontFamily: "Lato, sans-serif",fontWeight: "400",fontSize: "1rem", }}
+            sx={{ textTransform: "none",color: "#ffffff",fontFamily: "Lato, sans-serif",fontWeight: "400",fontSize: "1rem", }}
             onClick={handleMenuOpen(setAnchorElAbout)}
           >
             About
@@ -111,11 +111,11 @@ const HeaderNew: React.FC = () => {
             <MenuItem onClick={handleMenuClose(setAnchorElAbout)}>Alliance</MenuItem>
           </Menu>
 
-          <Button color="inherit" sx={{ textTransform: "none",color: "#3f6d8f",fontFamily: "Lato, sans-serif",fontWeight: "400",fontSize: "1rem" }}
+          <Button color="inherit" sx={{ textTransform: "none",color: "#ffffff",fontFamily: "Lato, sans-serif",fontWeight: "400",fontSize: "1rem" }}
           >
             Resources
           </Button>
-          <Button color="inherit" sx={{ textTransform: "none",color: "#3f6d8f",fontFamily: "Lato, sans-serif",fontWeight: "400",fontSize: "1rem" }}
+          <Button color="inherit" sx={{ textTransform: "none",color: "#ffffff",fontFamily: "Lato, sans-serif",fontWeight: "400",fontSize: "1rem" }}
           >
             Contact
           </Button>

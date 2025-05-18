@@ -1,41 +1,44 @@
 import { Box, Button, Typography } from "@mui/material";
+import HeaderNew from "./HeaderNew"; // <-- Add this import
 import backgroundImage from "../assets/solarPanelDarkHR.png";
+
 const HomepageHero = () => {
   return (
     <Box
       sx={{
-        backgroundImage: `url(${backgroundImage})`, // Replace with your image URL
-        backgroundSize: "cover", // Ensures the image covers the entire area
-        backgroundPosition: "center", // Centers the image
-        backgroundRepeat: "no-repeat", // Prevents the image from repeating
-        height: "65vh", // Full screen height
-        display: "flex", // Enables flexbox for centering text
-        justifyContent: "center", // Centers text horizontally
-        color: "#ffffff", // White text color
-        textAlign: "center", // Center-align text
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        height: "65vh",
+        display: "flex",
+        flexDirection: "column", // Stack header and content vertically
+        color: "#ffffff",
+        textAlign: "center",
         position: "relative",
         imageRendering: "auto",
       }}
     >
-      <Box>
+      <HeaderNew /> {/* <-- Add your header here */}
+      <Box sx={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
         <Typography
           variant="h4"
           component="h1"
           sx={{
             fontWeight: "200",
-            fontFamily: "Roboto,Helvetica,Arial sans-serif",
-            textShadow: "1px 1px 2px rgba(0, 0, 0, 0.7)", // Adds a shadow for better readability
-            marginTop: "3rem",
+            fontFamily: "Roboto,Helvetica,Arial,sans-serif",
+            textShadow: "1px 1px 2px rgba(0, 0, 0, 0.7)",
+            mt: { xs: 8, md: 0 },
           }}
         >
-          Clean Energy, Smart Future,&nbsp; <br></br>
+          Clean Energy, Smart Future,<br />
           Solar Made Simple
         </Typography>
         <Typography
           variant="h6"
           sx={{
             marginTop: "2.5rem",
-            textShadow: "1px 1px 2px rgba(0, 0, 0, 0.7)", // Adds a shadow for better readability
+            textShadow: "1px 1px 2px rgba(0, 0, 0, 0.7)",
           }}
         >
           D-Sun Energy Helps Carbon Free Energy Buyers, Sellers and Financiers

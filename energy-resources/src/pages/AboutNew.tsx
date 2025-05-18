@@ -9,7 +9,7 @@ import WhatWeDo from "../components/WhatWeDo";
 export default function About() {
   return (
     <>
-      <HeaderNew />
+      {/* <HeaderNew /> */}
       <HomepageHero />
       <Box
         sx={{
@@ -18,7 +18,11 @@ export default function About() {
           padding: "0 0",
         }}
       >
+        {/* AboutCards is now above the animation */}
         <AboutCards />
+
+        {/* Animation section */}
+
         <Solutions />
         <WhatWeDo />
       </Box>
