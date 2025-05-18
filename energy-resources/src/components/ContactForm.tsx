@@ -98,6 +98,9 @@ const MultiStepForm = () => {
               <TextField label="Pin Code" fullWidth />
             </Grid>
             <Grid size={{ xs: 12 }}>
+              <TextField label="Your query" multiline fullWidth minRows={3}/>
+            </Grid>
+            <Grid size={{ xs: 12 }}>
               <Divider sx={{ my: 2 }} />
               <Button
                 variant="contained"
