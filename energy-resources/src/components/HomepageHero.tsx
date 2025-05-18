@@ -1,7 +1,8 @@
 import { Box, Button, Typography } from "@mui/material";
 import HeaderNew from "./HeaderNew"; // <-- Add this import
 import backgroundImage from "../assets/solarPanelDarkHR.png";
-
+import backgroundImage1 from "../assets/heroimage2.png";
+import backgroundImage2 from "../assets/heroimage3.png";
 const HomepageHero = () => {
   return (
     <Box

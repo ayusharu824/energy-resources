@@ -44,18 +44,28 @@ const Solutions = () => {
   return (
     <>
       <Box sx={{ margin: "0 0", backgroundColor: "#f0f7ff", py: 6 }}>
-        <Typography
-        variant="h4"
-        component="h1"
-        fontWeight={600}
-        color="#1b1763"
-        textAlign="left"
-        margin="2em 0 1.5em 2.2em"
-        borderBottom= "2px solid #1b1763"
-        gutterBottom
-      >
-        Our Solutions
-      </Typography>
+        <Box sx={{ pl: { xs: 2, md: "2.2em" }, mb: 3 }}>
+          <Typography
+            variant="h4"
+            component="h1"
+            fontWeight={700}
+            color="#1b1763"
+            textAlign="left"
+            sx={{ mb: 1 }}
+            gutterBottom
+          >
+            Our Solutions
+          </Typography>
+          <Box
+            sx={{
+              width: 64,
+              height: 6,
+              borderRadius: 3,
+              background: "linear-gradient(90deg, #1b1763 60%, #4fc3f7 100%)",
+              mt: 0.5,
+            }}
+          />
+        </Box>
         <Box sx={{ margin: "0 5em" }}>
           {data.map((item, index) => (
             <Grid

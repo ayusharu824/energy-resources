@@ -3,7 +3,14 @@ import { Box, Button, Typography } from "@mui/material";
 const WhatWeDo = () => {
   return (
     <>
-      <Box sx={{ padding: "0 14%", marginTop: "2rem" }}>
+      <Box
+        sx={{
+          padding: "0 3%",
+          backgroundColor: "#eaf7ff",
+          minHeight: "26rem",
+          pt: { xs: 5, md: 6 }
+        }}
+      >
         <Typography
           variant="h4"
           component="h1"
@@ -14,6 +21,16 @@ const WhatWeDo = () => {
         >
           What We Do ?
         </Typography>
+        <Box
+          sx={{
+            width: 64,
+            height: 6,
+            borderRadius: 3,
+            background: "linear-gradient(90deg, #1b1763 60%, #4fc3f7 100%)",
+            mt: 0.5,
+            mb: 1.5,
+          }}
+        />
         <Typography
           variant="body1"
           color="textSecondary"
@@ -33,12 +50,10 @@ const WhatWeDo = () => {
           Access, we make clean energy not only accessible but also
           affordable and scalable.
         </Typography>
-      </Box>
       <Box
         sx={{
           marginTop: "2rem",
           display: "flex",
-          marginLeft: "14%",
           justifyContent: "left",
           marginBottom: "2rem",
           gap: 2,
@@ -63,6 +78,7 @@ const WhatWeDo = () => {
         >
           Contact Us
         </Button>
+      </Box>
       </Box>
     </>
   );

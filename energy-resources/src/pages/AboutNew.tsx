@@ -20,9 +20,6 @@ export default function About() {
       >
         {/* AboutCards is now above the animation */}
         <AboutCards />
-
-        {/* Animation section */}
-
         <Solutions />
         <WhatWeDo />
       </Box>

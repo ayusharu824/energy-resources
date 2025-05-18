@@ -1,133 +1,125 @@
-import React from "react";
 import {
   Box,
-  Button,
-  Container,
   Grid,
-  TextField,
   Typography,
-  Paper,
+  TextField,
+  Button,
   Card,
+  Divider,
 } from "@mui/material";
-import "../styles/ContactForm.css";
+import familyPhoto from "../assets/happyfamily.png"; // Replace with your image path
+import buisnessPhoto from "../assets/businessPeopleContactForm.png"; // Replace with your image path
+import buisnessPhoto2 from "../assets/businessPeopleContactForm2.png"; // Replace with your image path
 
-const ContactForm = () => {
+const MultiStepForm = () => {
   return (
-    <>
-      <Box
-        sx={{ marginTop: "2rem", marginBottom: "2rem", marginLeft: "13rem" }}
+    <Grid container sx={{ minHeight: "80vh" }}>
+      {/* Left Side - Illustration + Steps */}
+      <Grid
+        size={{ xs: 12, md: 5 }}
+        sx={{
+          background: "linear-gradient(180deg, #1b1763 0%, #81c784 100%)",
+          color: "#fff",
+          px: 4,
+          py: 6,
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+        }}
       >
+        <Box>
+          <Typography variant="h4" fontWeight={700} mb={1}>
+            Add your infromation so that we can get in touch with you for better
+            tomorrow.
+          </Typography>
+          <Typography variant="body1" color="#e1bee7">
+          </Typography>
+        </Box>
+
+        <Box>
+          <img
+            src={buisnessPhoto2} // Replace with your image path
+            alt="Family Illustration"
+            style={{ width: "100%", maxWidth: "20rem" }}
+          />
+        </Box>
+      </Grid>
+
+      {/* Right Side - Form */}
+      <Grid size={{ xs: 12, md: 7 }} sx={{ px: { xs: 3, md: 8 }, py: 6 }}>
         <Typography
           variant="h4"
           component="h1"
           fontWeight={600}
           color="#1b1763"
           textAlign={"left"}
-          marginRight={"4rem"}
+          gutterBottom
         >
           Get in Touch
         </Typography>
-      </Box>
-      <Container maxWidth="lg">
-        {/* <Paper elevation={5} className="modern-form-container"> */}
-        <Card
+        <Box
           sx={{
-            background: "#fff",
-            borderRadius: 4,
-            boxShadow: "0 4px 24px 0 rgba(0,0,0,0.07)",
-            p: 4,
-            mx: "auto",
-            maxWidth: 1100,
-            mb: 6,
+            width: 64,
+            height: 6,
+            borderRadius: 3,
+            background: "linear-gradient(90deg, #1b1763 60%, #4fc3f7 100%)",
+            mt: 0.5,
+            mb: 1.5,
           }}
-        >
-          <Box component="form" noValidate autoComplete="off">
-            <Grid container spacing={3}>
-              <Grid size={{ xs: 12 }}>
-                <TextField label="First Name" variant="outlined" fullWidth />
-              </Grid>
-              <Grid size={{ xs: 12 }}>
-                <TextField label="Last Name" variant="outlined" fullWidth />
-              </Grid>
-              <Grid size={{ xs: 12 }}>
-                <TextField
-                  label="Email"
-                  type="email"
-                  variant="outlined"
-                  fullWidth
-                />
-              </Grid>
-              <Grid size={{ xs: 12 }}>
-                <TextField
-                  label="Contact Number"
-                  type="tel"
-                  variant="outlined"
-                  fullWidth
-                />
-              </Grid>
-              <Grid size={{ xs: 12 }}>
-                <TextField
-                  label="Address"
-                  multiline
-                  rows={3}
-                  variant="outlined"
-                  fullWidth
-                />
-              </Grid>
-              <Grid size={{ xs: 12 }}>
-                <TextField
-                  label="Subject"
-                  multiline
-                  variant="outlined"
-                  fullWidth
-                />
-              </Grid>
-              <Grid size={{ xs: 12 }}>
-                <TextField
-                  label="Message"
-                  multiline
-                  rows={3}
-                  variant="outlined"
-                  fullWidth
-                />
-              </Grid>
-              <Grid container spacing={2}>
-                <Grid size={{ xs: 12 }}>
-                  <Button
-                    variant="contained"
-                    size="large"
-                    sx={{
-                      textTransform: "none",
-                      color: "#ffffff",
-                      borderRadius: "1rem",
-                      px: 4, // horizontal padding
-                      py: 1.5, // vertical padding
-                      mr: 2,
-                    }}
-                  >
-                    Submit
-                  </Button>
-                  <Button
-                    variant="outlined"
-                    color="primary"
-                    size="large"
-                    sx={{
-                      textTransform: "none",
-                      borderRadius: "1rem",
-                      px: 4,
-                      py: 1.5,
-                    }}
-                  >
-                    Cancel
-                  </Button>
-                </Grid>
-              </Grid>
+        />
+        <Typography variant="body1" color="text.secondary" mb={4}>
+          Fill your details so that we can know you better.
+        </Typography>
+
+        <Card sx={{ p: 4, boxShadow: 3, borderRadius: 3 }}>
+          <Grid container spacing={3}>
+            <Grid size={{ xs: 12, md: 6 }}>
+              <TextField label="First Name" fullWidth />
             </Grid>
-          </Box>
+            <Grid size={{ xs: 12, md: 6 }}>
+              <TextField label="Last Name" fullWidth />
+            </Grid>
+            <Grid size={{ xs: 12, md: 6 }}>
+              <TextField label="Email Address" fullWidth />
+            </Grid>
+            <Grid size={{ xs: 12, md: 6 }}>
+              <TextField label="Contact Number" fullWidth />
+            </Grid>
+            <Grid size={{ xs: 12 }}>
+              <TextField label="Address Line 1" fullWidth />
+            </Grid>
+            <Grid size={{ xs: 12, md: 6 }}>
+              <TextField label="City" fullWidth />
+            </Grid>
+            <Grid size={{ xs: 12, md: 3 }}>
+              <TextField label="State" fullWidth />
+            </Grid>
+            <Grid size={{ xs: 12, md: 3 }}>
+              <TextField label="Pin Code" fullWidth />
+            </Grid>
+            <Grid size={{ xs: 12 }}>
+              <Divider sx={{ my: 2 }} />
+              <Button
+                variant="contained"
+                fullWidth
+                size="large"
+                sx={{
+                  backgroundColor: "linear-gradient(180deg,0%, #81c784 100%)",
+                  textTransform: "none",
+                  "&:hover": {
+                    backgroundColor: "#1b1763",
+                    color: "#fff",
+                  },
+                }}
+              >
+                Continue
+              </Button>
+            </Grid>
+          </Grid>
         </Card>
-      </Container>
-    </>
+      </Grid>
+    </Grid>
   );
 };
 
-export default ContactForm;
+export default MultiStepForm;
