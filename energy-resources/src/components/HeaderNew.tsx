@@ -1,7 +1,6 @@
 import React from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Menu from "@mui/material/Menu";
@@ -9,119 +8,99 @@ import MenuItem from "@mui/material/MenuItem";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
-import mainLogo from "../assets/mainLogoLg.png"; // Adjust the path based on your folder structure
+import mainLogo from "../assets/mainLogoLg.png";
+
+const navButtonStyle = {
+  position: "relative",
+  textTransform: "none",
+  color: "#5E35B1",
+  fontFamily: "Lato, sans-serif",
+  fontWeight: 500,
+  fontSize: "1.1rem",
+  overflow: "hidden",
+  "&::after": {
+    content: '""',
+    position: "absolute",
+    width: "0%",
+    height: "2px",
+    bottom: "-4px",
+    left: "50%",
+    transform: "translateX(-50%)",
+    backgroundColor: "#5E35B1",
+    transition: "width 0.3s ease-in-out",
+  },
+  "&:hover": {
+    backgroundColor: "transparent",
+    "&::after": {
+      width: "100%",
+    },
+  },
+};
 
 const HeaderNew: React.FC = () => {
-  const [anchorElSolutions, setAnchorElSolutions] = React.useState<null | HTMLElement>(null);
-  const [anchorElPlatform, setAnchorElPlatform] = React.useState<null | HTMLElement>(null);
-  const [anchorElAbout, setAnchorElAbout] = React.useState<null | HTMLElement>(null);
+  const [anchorEl, setAnchorEl] = React.useState({
+    solutions: null as null | HTMLElement,
+    platform: null as null | HTMLElement,
+    about: null as null | HTMLElement,
+  });
 
-  const handleMenuOpen = (setAnchor: React.Dispatch<React.SetStateAction<null | HTMLElement>>) => (event: React.MouseEvent<HTMLElement>) => {
-    setAnchor(event.currentTarget);
+  const handleMenuOpen = (key: keyof typeof anchorEl) =>
+    (event: React.MouseEvent<HTMLElement>) => {
+      setAnchorEl((prev) => ({ ...prev, [key]: event.currentTarget }));
+    };
+
+  const handleMenuClose = (key: keyof typeof anchorEl) => () => {
+    setAnchorEl((prev) => ({ ...prev, [key]: null }));
   };
 
-  const handleMenuClose = (setAnchor: React.Dispatch<React.SetStateAction<null | HTMLElement>>) => () => {
-    setAnchor(null);
-  };
+  const renderMenu = (
+    key: keyof typeof anchorEl,
+    items: string[]
+  ) => (
+    <Menu
+      anchorEl={anchorEl[key]}
+      open={Boolean(anchorEl[key])}
+      onClose={handleMenuClose(key)}
+    >
+      {items.map((item) => (
+        <MenuItem key={item} onClick={handleMenuClose(key)}>
+          {item}
+        </MenuItem>
+      ))}
+    </Menu>
+  );
 
   return (
     <AppBar
-      position="static"
-      sx={{
-        backgroundColor: "transparent", // White background
-        color: "#ffffff", // Black text
-        boxShadow: "none", // Remove default shadow
-        //borderBottom: "1px solid #e0e0e0", // Add a subtle border
-      }}
+      position="absolute"
+      sx={{ background: "transparent", boxShadow: "none", top: 0, left: 0 }}
     >
       <Toolbar sx={{ justifyContent: "space-between" }}>
         {/* Logo */}
         <Link to="/" style={{ textDecoration: "none" }}>
-        <Typography
-          variant="h6"
-          component="div"
-          sx={{ fontWeight: "bold", color: "#ffffff" }}
-        >
           <img
             src={mainLogo}
-            alt="LevelTen Energy Logo"
+            alt="Logo"
             width="140"
             height="50"
+            style={{ marginTop: "1rem" }}
           />
-        </Typography>
         </Link>
 
-        {/* Mobile Navigation Links */}
-        {/* Desktop Navigation Links */}
+        {/* Desktop Navigation */}
         <Box sx={{ display: { xs: "none", md: "flex" }, gap: 3 }}>
-          {/* Solutions Dropdown */}
-          <Button
-            color="inherit"
-            sx={{ textTransform: "none",color: "#ffffff",fontFamily: "Lato, sans-serif",fontWeight: "400",fontSize: "1rem" }}
-            onClick={handleMenuOpen(setAnchorElSolutions)}
+          <Button sx={navButtonStyle} onClick={handleMenuOpen("solutions")}>Solutions</Button>
+          {renderMenu("solutions", ["Advisors", "Energy Buyers", "Developers", "Utilities"])}
 
-          >
-            Solutions
-          </Button>
-          <Menu
-            anchorEl={anchorElSolutions}
-            open={Boolean(anchorElSolutions)}
-            onClose={handleMenuClose(setAnchorElSolutions)}
-          >
-            <MenuItem onClick={handleMenuClose(setAnchorElSolutions)}>Advisors</MenuItem>
-            <MenuItem onClick={handleMenuClose(setAnchorElSolutions)}>Energy Buyers</MenuItem>
-            <MenuItem onClick={handleMenuClose(setAnchorElSolutions)}>Developers</MenuItem>
-            <MenuItem onClick={handleMenuClose(setAnchorElSolutions)}>Utilities</MenuItem>
-          </Menu>
+          <Button sx={navButtonStyle} onClick={handleMenuOpen("platform")}>Platform</Button>
+          {renderMenu("platform", ["Energy Marketplace", "Asset Marketplace", "MarketPulse", "PPA Index"])}
 
-          {/* Platform Dropdown */}
-          <Button
-            color="inherit"
-            sx={{ textTransform: "none",color: "#ffffff",fontFamily: "Lato, sans-serif",fontWeight: "400",fontSize: "1rem"}}
-            onClick={handleMenuOpen(setAnchorElPlatform)}
-          >
-            Platform
-          </Button>
-          <Menu
-            anchorEl={anchorElPlatform}
-            open={Boolean(anchorElPlatform)}
-            onClose={handleMenuClose(setAnchorElPlatform)}
-          >
-            <MenuItem onClick={handleMenuClose(setAnchorElPlatform)}>Energy Marketplace</MenuItem>
-            <MenuItem onClick={handleMenuClose(setAnchorElPlatform)}>Asset Marketplace</MenuItem>
-            <MenuItem onClick={handleMenuClose(setAnchorElPlatform)}>MarketPulse</MenuItem>
-            <MenuItem onClick={handleMenuClose(setAnchorElPlatform)}>PPA Index</MenuItem>
-          </Menu>
+          <Button sx={navButtonStyle} onClick={handleMenuOpen("about")}>About</Button>
+          {renderMenu("about", ["Careers", "Company News", "Alliance"])}
 
-          {/* About Dropdown */}
-          <Button
-            color="inherit"
-            sx={{ textTransform: "none",color: "#ffffff",fontFamily: "Lato, sans-serif",fontWeight: "400",fontSize: "1rem", }}
-            onClick={handleMenuOpen(setAnchorElAbout)}
-          >
-            About
-          </Button>
-          <Menu
-            anchorEl={anchorElAbout}
-            open={Boolean(anchorElAbout)}
-            onClose={handleMenuClose(setAnchorElAbout)}
-          >
-            <MenuItem onClick={handleMenuClose(setAnchorElAbout)}>Careers</MenuItem>
-            <MenuItem onClick={handleMenuClose(setAnchorElAbout)}>Company News</MenuItem>
-            <MenuItem onClick={handleMenuClose(setAnchorElAbout)}>Alliance</MenuItem>
-          </Menu>
-
-          <Button color="inherit" sx={{ textTransform: "none",color: "#ffffff",fontFamily: "Lato, sans-serif",fontWeight: "400",fontSize: "1rem" }}
-          >
-            Resources
-          </Button>
-          <Button color="inherit" sx={{ textTransform: "none",color: "#ffffff",fontFamily: "Lato, sans-serif",fontWeight: "400",fontSize: "1rem" }}
-          >
-            Contact
-          </Button>
+          <Button sx={navButtonStyle}>Resources</Button>
+          <Button sx={navButtonStyle}>Contact</Button>
         </Box>
-
-        {/* Call-to-Action Button */}
 
         {/* Mobile Menu Icon */}
         <IconButton

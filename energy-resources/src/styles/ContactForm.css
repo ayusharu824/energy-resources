@@ -1,25 +1,41 @@
-.modern-form-container {
-  padding: 40px 30px;
-  border-radius: 20px;
-  background: #ffffff;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+.hero-root {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.02),
+      rgba(255, 255, 255, 0.02)
+    ),
+    url('../assets/mountainHeroPhoto1.jpg') no-repeat center center/cover;
+  /* background: url('../assets/mountainHeroPhoto1.jpg') no-repeat center center/cover; */
+  padding: 100px 0;
+  text-align: center;
+  position: relative;
+  height: 30rem;
 }
 
-.form-title {
-  font-weight: 600;
-  margin-bottom: 20px;
+.hero-content {
+  z-index: 1;
+  position: relative;
 }
 
-.submit-btn {
-  background: linear-gradient(90deg, #4caf50, #81c784);
+.hero-title {
+  font-weight: 700;
+  color: #2e3b4e;
+}
+
+.hero-subtitle {
+  color: #4f5b62;
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+.hero-button {
+  background-color: #2e7d32;
   color: white;
-  padding: 12px;
+  padding: 12px 30px;
   font-size: 16px;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: background 0.3s ease;
+  text-transform: none;
 }
 
-.submit-btn:hover {
-  background: linear-gradient(90deg, #43a047, #66bb6a);
+.hero-button:hover {
+  background-color: #1b5e20;
 }

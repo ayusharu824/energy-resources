@@ -1,66 +1,89 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Container, Typography } from "@mui/material";
 import HeaderNew from "./HeaderNew"; // <-- Add this import
 import backgroundImage from "../assets/solarPanelDarkHR.png";
 import backgroundImage1 from "../assets/heroimage2.png";
 import backgroundImage2 from "../assets/heroimage3.png";
+import backgroundImage3 from "../assets/transparentHeroImgCropped.png";
+import "../styles/ContactForm.css"; // Import your CSS file
 const HomepageHero = () => {
   return (
-    <Box
-      sx={{
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        height: "65vh",
-        display: "flex",
-        flexDirection: "column", // Stack header and content vertically
-        color: "#ffffff",
-        textAlign: "center",
-        position: "relative",
-        imageRendering: "auto",
-      }}
-    >
-      <HeaderNew /> {/* <-- Add your header here */}
-      <Box sx={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
-        <Typography
-          variant="h4"
-          component="h1"
+    <>
+      <HeaderNew />
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          px: { xs: 2, md: 8 },
+          py: { xs: 6, md: 10 },
+          minHeight: "80vh",
+          backgroundColor: "#e8eefe", // soft pastel background
+        }}
+      >
+        {/* Left Section */}
+        <Box sx={{ flex: 1, pr: { md: 4 } }}>
+          <Typography
+            variant="overline"
+            sx={{ color: "#00C853", fontWeight: 600 }}
+          >
+            Energy For The Future
+          </Typography>
+
+          <Typography
+            variant="h3"
+            component="h1"
+            sx={{
+              fontWeight: 700,
+              mb: 3,
+              color: "#2C3E50",
+              maxWidth: 500,
+            }}
+          >
+            Smart, Clean Solar Energy Made Simple
+          </Typography>
+
+          <Typography sx={{ mb: 4, color: "#555", maxWidth: 480 }}>
+            D-Sun helps carbon-free energy buyers, sellers, and financiers
+            connect and get better deals—faster.
+          </Typography>
+
+          <Button
+            variant="contained"
+            size="large"
+            sx={{
+              backgroundColor: "#00C853",
+              "&:hover": {
+                backgroundColor: "#00B44C",
+              },
+              textTransform: "none",
+              fontSize: "1rem",
+              px: 4,
+              py: 1.5,
+              borderRadius: "8px",
+              fontWeight: 600,
+            }}
+          >
+            Learn More
+          </Button>
+        </Box>
+
+        {/* Right Section - Illustration */}
+        <Box
           sx={{
-            fontWeight: "200",
-            fontFamily: "Roboto,Helvetica,Arial,sans-serif",
-            textShadow: "1px 1px 2px rgba(0, 0, 0, 0.7)",
-            mt: { xs: 8, md: 0 },
+            flex: 1,
+            display: "flex",
+            justifyContent: "center",
+            mt: { xs: 4, md: 0 },
           }}
         >
-          Clean Energy, Smart Future,<br />
-          Solar Made Simple
-        </Typography>
-        <Typography
-          variant="h6"
-          sx={{
-            marginTop: "2.5rem",
-            textShadow: "1px 1px 2px rgba(0, 0, 0, 0.7)",
-          }}
-        >
-          D-Sun Energy Helps Carbon Free Energy Buyers, Sellers and Financiers
-          <br /> Get Better Deal Done Faster.
-        </Typography>
-        <Button
-          variant="contained"
-          size="large"
-          sx={{
-            backgroundColor: "#ffffff",
-            marginTop: "3.5rem",
-            padding: "0.75rem 2rem",
-            textTransform: "none",
-            fontWeight: "bold",
-            borderRadius: "1rem",
-          }}
-        >
-          Learn More
-        </Button>
+          <img
+            src={backgroundImage3} // Replace with your illustration
+            alt="Clean energy illustration"
+            style={{ maxWidth: "100%", height: "auto", maxHeight: "55rem",marginTop:"-4rem", borderRadius: "1rem" }}
+          />
+        </Box>
       </Box>
-    </Box>
+    </>
   );
 };
 
