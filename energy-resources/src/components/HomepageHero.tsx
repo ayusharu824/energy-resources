@@ -16,6 +16,7 @@ const HomepageHero = () => {
           justifyContent: "space-between",
           px: { xs: 2, md: 8 },
           py: { xs: 6, md: 10 },
+          maxHeight: "90vh",
           minHeight: "80vh",
           backgroundColor: "#e8eefe", // soft pastel background
         }}
@@ -72,14 +73,14 @@ const HomepageHero = () => {
           sx={{
             flex: 1,
             display: "flex",
-            justifyContent: "center",
+            justifyContent: "flex-end",
             mt: { xs: 4, md: 0 },
           }}
         >
           <img
             src={backgroundImage3} // Replace with your illustration
             alt="Clean energy illustration"
-            style={{ maxWidth: "100%", height: "auto", maxHeight: "55rem",marginTop:"-4rem", borderRadius: "1rem" }}
+            style={{ maxWidth: "100%", height: "auto", maxHeight: "35rem",marginTop:"-4rem", borderRadius: "1rem" }}
           />
         </Box>
       </Box>

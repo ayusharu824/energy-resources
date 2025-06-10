@@ -5,6 +5,9 @@ import ContactForm from "../components/ContactForm";
 import AboutCards from "../components/AboutCards";
 import Solutions from "../components/Solutions";
 import WhatWeDo from "../components/WhatWeDo";
+import Services from "../components/Services";
+import SolutionsNew from "../components/SolutionsNew";
+import DsunForYou from "../components/DsunForYou";
 
 export default function About() {
   return (
@@ -20,7 +23,10 @@ export default function About() {
       >
         {/* AboutCards is now above the animation */}
         <AboutCards />
+        <Services />
         <Solutions />
+        <SolutionsNew/>
+        <DsunForYou />
         <WhatWeDo />
       </Box>
 

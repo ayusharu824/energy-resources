@@ -13,7 +13,8 @@ const AboutCards = () => {
         py: 10,
         mx: "auto",
         maxWidth: 1500,
-        backgroundColor: "#f5fafd"
+        backgroundColor: "#f5fafd",
+        margin: "0 0",
       }}
     >
       <Grid container spacing={4} alignItems="stretch">

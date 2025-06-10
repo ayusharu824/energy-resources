@@ -1,40 +1,41 @@
 import { Box, Typography, Grid } from "@mui/material";
-import consumerImage from "../assets/windturbines.jpg"; // Replace with your actual image path
-import developerImage from "../assets/greenbulb.jpg"; // Replace with your actual image path
-import financiersImage from "../assets/solarpanels.jpg"; // Replace with your actual image path
+import consumerImage from "../assets/windturbines.jpg"
+import developerImage from "../assets/greenbulb.jpg";
+import financiersImage from "../assets/solarpanels.jpg";
 
 const data = [
   {
     title: "C&I Consumers",
     image: consumerImage,
-    text: `Commercial and Industrial (C&I) consumers now have three powerful pathways to switch to green energy — without disruption, capex, or complexity.
-Whether you're a manufacturing plant, corporate office, data centers or logistics park, our platform connects you to the most efficient and cost-effective clean energy options available today.`,
+    text: `Whether you're a factory, office, data center, or logistics hub — we make your shift to clean energy seamless and cost-effective.`,
+    text2: `Switch to smarter, cheaper power — without disruption.`,
     list: [
-      "We foster community for Group Captive Open Access renewable energy.",
-      "Connecting potential group captive/captive C&I clients with the developers.",
-      "Our wider green energy financiers network makes the funding to reduce the initial capex for both the captive and group captive project.",
+      "Join Group Captive communities across states under Open Access.",
+      "Connect with verified developers offering Group Captive and Third-Party models.",
+      "Access green financing to lower or eliminate upfront investment.",
     ],
     reduceHeight: true,
   },
   {
     title: "Developers",
     image: developerImage,
-    text: `Developers now have easier access to a wide base of C&I consumers looking to partner for clean energy projects.`,
+    text: `We connect renewable energy developers with a wide network of open access consumers across India.`,
     list: [
-      "Streamlined matchmaking with potential clients.",
-      "Access to a vetted network of financiers to ease project execution.",
-      "Tools and analytics for better demand forecasting.",
+      "List Group Captive or Third-Party projects to attract ready buyers.",
+      "Accelerate group formation with pre-qualified C&I clients by discom.",
+      "Streamline financing and execution through verified leads and compliance support.",
     ],
     reduceHeight: true,
   },
   {
     title: "Financiers",
     image: financiersImage,
-    text: `Financiers can now support clean energy projects with greater confidence and returns.`,
+    text: `Get access to high-quality renewable energy projects with long-term C&I offtake.`,
+    text2: `Fuel clean energy, earn strong returns.`,
     list: [
-      "Pipeline of vetted C&I clients and developers.",
-      "Structured financial solutions to reduce risk.",
-      "Transparent project tracking and impact measurement.",
+      "Invest in Group Captive, Captive and Third-Party PPAs with stable returns.",
+      "Accelerate green adoption across industries and commercial users.",
+      "Partner with trusted developers for low-risk, impact-driven opportunities.",
     ],
     reduceHeight: true,
   },
@@ -92,16 +93,35 @@ const Solutions = () => {
                 </Typography>
                 <Typography
                   variant="body1"
-                  color="textSecondary"
+                  color="textprimary"
                   sx={{ lineHeight: 1.8, marginBottom: "1rem" }}
                 >
                   {item.text}
                 </Typography>
-                <ul>
+                <ul
+                  style={{
+                    paddingLeft: "1.2em",
+                    marginBottom: "1rem",
+                    listStyle: "disc",
+                  }}
+                >
                   {item.list.map((point, idx) => (
-                    <li key={idx}>{point}</li>
+                    <li key={idx}>
+                      <Typography variant="body2" color="textprimary">
+                        {point}
+                      </Typography>
+                    </li>
                   ))}
                 </ul>
+                {item.text2 && (
+                  <Typography
+                    variant="body1"
+                    color="textprimary"
+                    sx={{ lineHeight: 1.8, marginBottom: "1rem" }}
+                  >
+                    {item.text2}
+                  </Typography>
+                )}
               </Grid>
 
               <Grid size={{ xs: 12, md: 6 }}>
@@ -110,7 +130,7 @@ const Solutions = () => {
                     src={item.image}
                     alt={item.title}
                     style={{
-                      width: "100%",
+                      width: "70%",
                       height: item.reduceHeight ? "20rem" : "auto",
                       objectFit: item.reduceHeight ? "cover" : "initial",
                       borderRadius: "12px",
