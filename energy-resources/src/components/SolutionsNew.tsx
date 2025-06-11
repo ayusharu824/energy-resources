@@ -1,13 +1,15 @@
-import { Box, Typography, Grid } from "@mui/material";
+import { Box, Typography, Grid, Button } from "@mui/material";
 import consumerImage from "../assets/windturbines.jpg";
 import developerImage from "../assets/greenbulb.jpg";
 import financiersImage from "../assets/solarpanels.jpg";
 import SolutionIcons1 from "../assets/SolutionsIcon1.png";
 import SolutionIcons2 from "../assets/SolutionsIcon2.png";
 import SolutionIcons3 from "../assets/SolutionsIcon3.png";
+import { useNavigate } from "react-router-dom";
 import "../styles/ContactForm.css";
 
 const SolutionsNew = () => {
+  const navigate = useNavigate();
   return (
     <>
       <Box sx={{ mb: 6, mt: 8, backgroundColor: "#F5F9FF", py: 6 }}>
@@ -83,6 +85,20 @@ const SolutionsNew = () => {
                 </div>
               </div>
             </div>
+            <Button
+              variant="contained"
+              size="large"
+              sx={{
+                textTransform: "none",
+                color: "#ffffff",
+                borderRadius: "1rem",
+                marginTop: "3rem",
+                minWidth: "90%",
+              }}
+              onClick={() => navigate("/consumers")}
+            >
+              Learn More
+            </Button>
           </Grid>
           {/* Icon 2 */}
           <Grid
@@ -126,6 +142,19 @@ const SolutionsNew = () => {
                 </div>
               </div>
             </div>
+            <Button
+              variant="contained"
+              size="large"
+              sx={{
+                textTransform: "none",
+                color: "#ffffff",
+                borderRadius: "1rem",
+                marginTop: "3rem",
+                minWidth: "90%",
+              }}
+            >
+              Learn More
+            </Button>
           </Grid>
           {/* Icon 3 */}
           <Grid
@@ -162,13 +191,28 @@ const SolutionsNew = () => {
                       users.
                     </li>
                     <li>
-                      Partner with trusted developers for low-risk, impact-driven opportunities.
+                      Partner with trusted developers for low-risk,
+                      impact-driven opportunities.
                     </li>
                     Fuel clean energy, earn strong returns.
                   </Box>
                 </div>
               </div>
             </div>
+            <Button
+              variant="contained"
+              size="large"
+              sx={{
+                textTransform: "none",
+                color: "#ffffff",
+                borderRadius: "1rem",
+                marginTop: "3rem",
+                minWidth: "90%",
+              }}
+              onClick={() => navigate("/consumers")}
+            >
+              Learn More
+            </Button>
           </Grid>
         </Grid>
       </Box>

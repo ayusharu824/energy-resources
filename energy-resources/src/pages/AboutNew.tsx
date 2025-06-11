@@ -12,7 +12,6 @@ import DsunForYou from "../components/DsunForYou";
 export default function About() {
   return (
     <>
-      {/* <HeaderNew /> */}
       <HomepageHero />
       <Box
         sx={{
