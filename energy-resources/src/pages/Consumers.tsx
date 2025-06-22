@@ -47,9 +47,7 @@ const gridData = [
   {
     title: "Developer Selection & Documentation",
     image: GroupCaptiveIcon,
-    desc: [
-      "Developer selected, agreements on energy requirements drafted.",
-    ],
+    desc: ["Developer selected, agreements on energy requirements drafted."],
   },
   {
     title: "Project Execution & Power Delivery",
@@ -63,65 +61,78 @@ const gridData = [
 export default function Consumers() {
   return (
     <>
-      <HeaderNew />
-      <Box sx={{ mb: 6, mt: 14, backgroundColor: "#F5F9FF", py: 6 }}>
-        <Box sx={{ pl: { xs: 2, md: "2.2em" }, mb: 3 }}>
-          <Typography
-            variant="h4"
-            component="h1"
-            fontWeight={700}
-            color="#1b1763"
-            textAlign="left"
-            sx={{ mb: 1 }}
-            gutterBottom
-          >
-            Solutions for C&I Consumers
-          </Typography>
-          <Box
-            sx={{
-              width: 64,
-              height: 6,
-              borderRadius: 3,
-              background: "linear-gradient(90deg, #1b1763 60%, #4fc3f7 100%)",
-              mt: 0.5,
-            }}
-          />
+      <Box
+        sx={{
+          position: "relative",
+          backgroundColor: "#F1FBF7", // soft pastel background
+          minHeight: "100vh", // ensures background covers the whole page
+        }}
+      >
+        <HeaderNew />
+        <Box
+          sx={{
+            px: { xs: 2, md: 6 },
+            py: { xs: 10, md: 15 },
+          }}
+        >
+          <Box sx={{ pl: { xs: 2, md: "2.2em" }, mb: 3 }}>
+            <Typography
+              variant="h4"
+              component="h1"
+              fontWeight={700}
+              color="#1b1763"
+              textAlign="left"
+              sx={{ mb: 1 }}
+              gutterBottom
+            >
+              Solutions for C&I Consumers
+            </Typography>
+            <Box
+              sx={{
+                width: 64,
+                height: 6,
+                borderRadius: 3,
+                background: "linear-gradient(90deg, #1b1763 60%, #4fc3f7 100%)",
+                mt: 0.5,
+              }}
+            />
+          </Box>
+          <Box sx={{ margin: "0 2.5em" }}>
+            <Typography
+              variant="body1"
+              color="#222"
+              sx={{
+                fontFamily: "Segoe UI, Arial, Helvetica, sans-serif",
+                fontSize: "1.1rem",
+                lineHeight: 1.85,
+                marginBottom: "1rem",
+                letterSpacing: 0.02,
+              }}
+            >
+              Commercial and industrial consumers now have three powerful
+              pathways to switch to green energy — without disruption, capex, or
+              complexity. Whether you're a manufacturing plant, corporate
+              office, or logistics park, our platform connects you to the most
+              efficient and cost-effective clean energy options available today.
+            </Typography>
+          </Box>
+          <Box sx={{ margin: "2em 2.5em 0 2.5em", textAlign: "center" }}>
+            <img
+              src={RenewableEnergyImg}
+              alt="C&I Consumers"
+              style={{
+                maxWidth: "40%",
+                height: "auto",
+                borderRadius: "12px",
+                boxShadow: "0 4px 16px rgba(0,0,0,0.08)",
+              }}
+            />
+          </Box>
+          <Box sx={{ margin: "2em 2.5em 0 2.5em", textAlign: "center" }}></Box>
         </Box>
-        <Box sx={{ margin: "0 2.5em" }}>
-          <Typography
-            variant="body1"
-            color="#222"
-            sx={{
-              fontFamily: "Segoe UI, Arial, Helvetica, sans-serif",
-              fontSize: "1.1rem",
-              lineHeight: 1.85,
-              marginBottom: "1rem",
-              letterSpacing: 0.02,
-            }}
-          >
-            Commercial and industrial consumers now have three powerful pathways
-            to switch to green energy — without disruption, capex, or
-            complexity. Whether you're a manufacturing plant, corporate office,
-            or logistics park, our platform connects you to the most efficient
-            and cost-effective clean energy options available today.
-          </Typography>
-        </Box>
-        <Box sx={{ margin: "2em 2.5em 0 2.5em", textAlign: "center" }}>
-          <img
-            src={RenewableEnergyImg}
-            alt="C&I Consumers"
-            style={{
-              maxWidth: "40%",
-              height: "auto",
-              borderRadius: "12px",
-              boxShadow: "0 4px 16px rgba(0,0,0,0.08)",
-            }}
-          />
-        </Box>
-        <Box sx={{ margin: "2em 2.5em 0 2.5em", textAlign: "center" }}></Box>
       </Box>
 
-      <Box sx={{ mb: 6, mt: 0, backgroundColor: "#F5F9FF", py: 6 }}>
+      <Box sx={{ mt: 0, backgroundColor: "#FAF8FD", py: 6, px: { xs: 2, md: 4 }}}>
         <Box sx={{ pl: { xs: 2, md: "2.2em" }, mb: 0 }}>
           <Typography
             variant="h4"
@@ -151,9 +162,10 @@ export default function Consumers() {
             fontFamily: "Segoe UI, Arial, Helvetica, sans-serif",
             fontSize: "1.1rem",
             lineHeight: 1.85,
-            marginBottom: "1rem",
+            marginTop: "1.5rem",
             letterSpacing: 0.02,
             padding: "0 2.0em",
+            px: { xs: 2, md: 6 },
           }}
         >
           Group Captive Open Access Solution is a clean energy project developed
@@ -187,7 +199,7 @@ export default function Consumers() {
         </Box>
       </Box>
 
-      <Box sx={{ mb: 6, mt: 0, backgroundColor: "#F5F9FF", py: 6 }}>
+      <Box sx={{mt: 0, backgroundColor: "#F0FAFD", py: 6, px: { xs: 2, md: 4 } }}>
         <Box sx={{ pl: { xs: 2, md: "2.2em" }, mb: 0 }}>
           <Typography
             variant="h4"
@@ -326,7 +338,7 @@ export default function Consumers() {
         </Box>
       </Box>
 
-      <Box sx={{ mb: 6, mt: 0, backgroundColor: "#F5F9FF", py: 6 }}>
+      <Box sx={{mt: 0, backgroundColor: "#FAFAFA", py: 6, px: { xs: 2, md: 4 } }}>
         <Box sx={{ pl: { xs: 2, md: "2.2em" }, mb: 0 }}>
           <Typography
             variant="h4"
@@ -464,176 +476,190 @@ export default function Consumers() {
           </ol>
         </Box>
         <Box sx={{ padding: "0 5.5em", mt: 8 }}>
-<Typography
-  variant="h4"
-  fontWeight={700}
-  align="center"
-  sx={{
-    color: "#1b1763",
-    mb: 4,
-    fontSize: { xs: "1.8rem", sm: "2.2rem", md: "2.5rem" },
-  }}
->
-  How Group Open Access Community Works
-</Typography>
-</Box>
-<Grid
-  container
-  spacing={4}
-  justifyContent="center"
-  alignItems="flex-start"
-  sx={{ marginTop: 4 }}
->
-  {gridData.map((item, idx) => (
-    <Grid
-      size={{xs: 12, md: 4, sm: 6}}
-      key={item.title}
-      sx={{
-        display: "flex",
-        justifyContent: "center",
-        position: "relative",
-      }}
-    >
-      <Box
-        sx={{
-          background: "#fff",
-          borderRadius: 3,
-          boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
-          p: 3,
-          textAlign: "center",
-          minWidth: 230,
-          maxWidth: 280,
-          height: 500,
-          width: "100%",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          position: "relative",
-        }}
-      >
-        {/* Title */}
-        <Typography
-          variant="h6"
-          fontWeight={600}
-          color="#1b1763"
-          sx={{ mb: 2, whiteSpace: "pre-line" }}
-        >
-          {item.title}
-        </Typography>
-
-        {/* Image */}
-        <Box sx={{ mb: 2 }}>
-          <img
-            src={item.image}
-            alt={item.title}
-            style={{
-              width: "100%",
-              maxWidth: "120px",
-              height: "auto",
-              borderRadius: "10px",
-              objectFit: "cover",
+          <Typography
+            variant="h4"
+            fontWeight={700}
+            align="center"
+            sx={{
+              color: "#1b1763",
+              mb: 4,
+              fontSize: { xs: "1.8rem", sm: "2.2rem", md: "2.5rem" },
             }}
-          />
-        </Box>
-
-        {/* Description */}
-        {Array.isArray(item.desc) ? (
-          <>
-            <Typography
-              variant="body2"
-              sx={{
-                mb: 1,
-                fontFamily: "Lato, 'Segoe UI', Arial, sans-serif",
-                fontSize: "1.08rem",
-                color: "#222",
-                letterSpacing: 0.1,
-                lineHeight: 1.7,
-              }}
-            >
-              {item.desc[0]}
-            </Typography>
-
-            <ul
-              style={{
-                textAlign: "left",
-                margin: "0.5em 0 0 1em",
-                padding: 0,
-                fontFamily: "Lato, 'Segoe UI', Arial, sans-serif",
-                fontSize: "1.02rem",
-                color: "#222",
-                letterSpacing: 0.05,
-                lineHeight: 1.7,
-              }}
-            >
-              {item.desc.slice(1).map((line, i) => (
-                <li
-                  key={i}
-                  style={{
-                    marginBottom: 6,
-                    listStyle: "disc",
-                  }}
-                >
-                  <Typography
-                    variant="body2"
-                    sx={{
-                      fontFamily: "Lato, 'Segoe UI', Arial, sans-serif",
-                      fontSize: "1.02rem",
-                      color: "#222",
-                      letterSpacing: 0.05,
-                      lineHeight: 1.7,
-                      display: "inline",
-                    }}
-                  >
-                    {typeof line === "string" ? (
-                      line.includes("at zero cost") ? (
-                        <>
-                          {line.replace("at zero cost", "")}
-                          <span style={{ fontWeight: 700, color: "#1b1763" }}>
-                            at zero cost
-                          </span>
-                        </>
-                      ) : line.includes("fast-track decision-making") ? (
-                        <>
-                          {line.replace("fast-track decision-making", "")}
-                          <span style={{ fontWeight: 700, color: "#1b1763" }}>
-                            fast-track decision-making
-                          </span>
-                        </>
-                      ) : (
-                        line
-                      )
-                    ) : (
-                      line
-                    )}
-                  </Typography>
-                </li>
-              ))}
-            </ul>
-          </>
-        ) : (
-          <Typography variant="body2" sx={{ mt: "auto" }}>
-            {item.desc}
+          >
+            How Group Open Access Community Works
           </Typography>
-        )}
-      </Box>
+        </Box>
+        <Grid
+          container
+          spacing={4}
+          justifyContent="center"
+          alignItems="flex-start"
+          sx={{ marginTop: 4 }}
+        >
+          {gridData.map((item, idx) => (
+            <Grid
+              size={{ xs: 12, md: 4, sm: 6 }}
+              key={item.title}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                position: "relative",
+              }}
+            >
+              <Box
+                sx={{
+                  background: "#fff",
+                  borderRadius: 3,
+                  boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
+                  p: 3,
+                  textAlign: "center",
+                  minWidth: 230,
+                  maxWidth: 280,
+                  height: 500,
+                  width: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                  position: "relative",
+                }}
+              >
+                {/* Title */}
+                <Typography
+                  variant="h6"
+                  fontWeight={600}
+                  color="#1b1763"
+                  sx={{ mb: 2, whiteSpace: "pre-line" }}
+                >
+                  {item.title}
+                </Typography>
 
-      {/* Arrow – show only if not the last item */}
-      {idx < gridData.length - 1 && (
-        <ArrowForwardIcon
-          sx={{
-            position: "absolute",
-            right: -12,
-            top: "50%",
-            transform: "translateY(-50%)",
-            fontSize: 50,
-            color: "#4a6972",
-          }}
-        />
-      )}
-    </Grid>
-  ))}
-</Grid>
+                {/* Image */}
+                <Box sx={{ mb: 2 }}>
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    style={{
+                      width: "100%",
+                      maxWidth: "120px",
+                      height: "auto",
+                      borderRadius: "10px",
+                      objectFit: "cover",
+                    }}
+                  />
+                </Box>
 
+                {/* Description */}
+                {Array.isArray(item.desc) ? (
+                  <>
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        mb: 1,
+                        fontFamily: "Lato, 'Segoe UI', Arial, sans-serif",
+                        fontSize: "1.08rem",
+                        color: "#222",
+                        letterSpacing: 0.1,
+                        lineHeight: 1.7,
+                      }}
+                    >
+                      {item.desc[0]}
+                    </Typography>
+
+                    <ul
+                      style={{
+                        textAlign: "left",
+                        margin: "0.5em 0 0 1em",
+                        padding: 0,
+                        fontFamily: "Lato, 'Segoe UI', Arial, sans-serif",
+                        fontSize: "1.02rem",
+                        color: "#222",
+                        letterSpacing: 0.05,
+                        lineHeight: 1.7,
+                      }}
+                    >
+                      {item.desc.slice(1).map((line, i) => (
+                        <li
+                          key={i}
+                          style={{
+                            marginBottom: 6,
+                            listStyle: "disc",
+                          }}
+                        >
+                          <Typography
+                            variant="body2"
+                            sx={{
+                              fontFamily: "Lato, 'Segoe UI', Arial, sans-serif",
+                              fontSize: "1.02rem",
+                              color: "#222",
+                              letterSpacing: 0.05,
+                              lineHeight: 1.7,
+                              display: "inline",
+                            }}
+                          >
+                            {typeof line === "string" ? (
+                              line.includes("at zero cost") ? (
+                                <>
+                                  {line.replace("at zero cost", "")}
+                                  <span
+                                    style={{
+                                      fontWeight: 700,
+                                      color: "#1b1763",
+                                    }}
+                                  >
+                                    at zero cost
+                                  </span>
+                                </>
+                              ) : line.includes(
+                                  "fast-track decision-making"
+                                ) ? (
+                                <>
+                                  {line.replace(
+                                    "fast-track decision-making",
+                                    ""
+                                  )}
+                                  <span
+                                    style={{
+                                      fontWeight: 700,
+                                      color: "#1b1763",
+                                    }}
+                                  >
+                                    fast-track decision-making
+                                  </span>
+                                </>
+                              ) : (
+                                line
+                              )
+                            ) : (
+                              line
+                            )}
+                          </Typography>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                ) : (
+                  <Typography variant="body2" sx={{ mt: "auto" }}>
+                    {item.desc}
+                  </Typography>
+                )}
+              </Box>
+
+              {/* Arrow – show only if not the last item */}
+              {idx < gridData.length - 1 && (
+                <ArrowForwardIcon
+                  sx={{
+                    position: "absolute",
+                    right: -12,
+                    top: "50%",
+                    transform: "translateY(-50%)",
+                    fontSize: 50,
+                    color: "#4a6972",
+                  }}
+                />
+              )}
+            </Grid>
+          ))}
+        </Grid>
       </Box>
     </>
   );
