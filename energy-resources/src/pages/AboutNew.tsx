@@ -8,6 +8,8 @@ import WhatWeDo from "../components/WhatWeDo";
 import Services from "../components/Services";
 import SolutionsNew from "../components/SolutionsNew";
 import DsunForYou from "../components/DsunForYou";
+import ConsumerProjectList from "../components/ConsumerProjectList";
+import InverstorsProjectList from "../components/InvestorsProjectList";
 
 export default function About() {
   return (
@@ -15,7 +17,7 @@ export default function About() {
       <HomepageHero />
       <Box
         sx={{
-          backgroundColor: "#fbffff",
+          backgroundColor: "#ffffff",
           minHeight: "100vh",
           padding: "0 0",
         }}
@@ -26,6 +28,8 @@ export default function About() {
         <Solutions />
         <SolutionsNew/>
         <DsunForYou />
+        <ConsumerProjectList />
+        <InverstorsProjectList />
         <WhatWeDo />
       </Box>
 

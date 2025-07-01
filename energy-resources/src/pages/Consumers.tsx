@@ -1,14 +1,6 @@
 import {
   Box,
-  Container,
   Grid,
-  Paper,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
   Typography,
 } from "@mui/material";
 import HeaderNew from "../components/HeaderNew";
@@ -16,8 +8,6 @@ import RenewableEnergyImg from "../assets/RenewableEnergy.png";
 import GroupCaptiveImg from "../assets/GroupCaptiveImg.png";
 import GroupCaptiveIcon from "../assets/GroupCaptiveIcon.png";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward"; // import this at the top
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import React from "react";
 
 const gridData = [
   {

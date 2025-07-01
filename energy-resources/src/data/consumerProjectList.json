@@ -1,0 +1,112 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "name": "Solar Power Plant",
+            "location": "California, USA",
+            "capacity": "100 MW",
+            "status": "Operational",
+            "energyType": "solar",
+            "usageRemaining": "50 MW",
+            "closingWindowPhase1":"2024-12-31",
+            "closingWindowPhase2":"2025-06-30",
+            "avgUnitPrice": "3"
+        },
+        {
+            "id": 2,
+            "name": "Wind Farm Power Plant",
+            "location": "California, USA",
+            "capacity": "100 MW",
+            "status": "Operational",
+            "energyType": "wind",
+            "usageRemaining": "50 MW",
+            "closingWindowPhase1":"2024-12-31",
+            "closingWindowPhase2":"2025-06-30",
+            "avgUnitPrice": "3"
+        },
+        {
+            "id": 3,
+            "name": "Hydroelectric Dam",
+            "location": "California, USA",
+            "capacity": "100 MW",
+            "status": "Operational",
+            "energyType": "hybrid",
+            "usageRemaining": "50 MW",
+            "closingWindowPhase1":"2024-12-31",
+            "closingWindowPhase2":"2025-06-30",
+            "avgUnitPrice": "3"
+        },
+        {
+            "id": 1,
+            "name": "Solar Power Plant",
+            "location": "California, USA",
+            "capacity": "100 MW",
+            "status": "Operational",
+            "energyType": "solar",
+            "usageRemaining": "50 MW",
+            "closingWindowPhase1":"2024-12-31",
+            "closingWindowPhase2":"2025-06-30",
+            "avgUnitPrice": "3"
+        },
+        {
+            "id": 2,
+            "name": "Wind Farm Power Plant",
+            "location": "California, USA",
+            "capacity": "100 MW",
+            "status": "Operational",
+            "energyType": "wind",
+            "usageRemaining": "50 MW",
+            "closingWindowPhase1":"2024-12-31",
+            "closingWindowPhase2":"2025-06-30",
+            "avgUnitPrice": "3"
+        },
+        {
+            "id": 3,
+            "name": "Hydroelectric Dam",
+            "location": "California, USA",
+            "capacity": "100 MW",
+            "status": "Operational",
+            "energyType": "hybrid",
+            "usageRemaining": "50 MW",
+            "closingWindowPhase1":"2024-12-31",
+            "closingWindowPhase2":"2025-06-30",
+            "avgUnitPrice": "3"
+        },
+        {
+            "id": 1,
+            "name": "Solar Power Plant",
+            "location": "California, USA",
+            "capacity": "100 MW",
+            "status": "Operational",
+            "energyType": "solar",
+            "usageRemaining": "50 MW",
+            "closingWindowPhase1":"2024-12-31",
+            "closingWindowPhase2":"2025-06-30",
+            "avgUnitPrice": "3"
+        },
+        {
+            "id": 2,
+            "name": "Wind Farm Power Plant",
+            "location": "California, USA",
+            "capacity": "100 MW",
+            "status": "Operational",
+            "energyType": "wind",
+            "usageRemaining": "50 MW",
+            "closingWindowPhase1":"2024-12-31",
+            "closingWindowPhase2":"2025-06-30",
+            "avgUnitPrice": "3"
+        },
+        {
+            "id": 3,
+            "name": "Hydroelectric Dam",
+            "location": "California, USA",
+            "capacity": "100 MW",
+            "status": "Operational",
+            "energyType": "hybrid",
+            "usageRemaining": "50 MW",
+            "closingWindowPhase1":"2024-12-31",
+            "closingWindowPhase2":"2025-06-30",
+            "avgUnitPrice": "3"
+        }
+    ]
+}
