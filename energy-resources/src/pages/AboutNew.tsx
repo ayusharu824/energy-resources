@@ -10,6 +10,7 @@ import SolutionsNew from "../components/SolutionsNew";
 import DsunForYou from "../components/DsunForYou";
 import ConsumerProjectList from "../components/ConsumerProjectList";
 import InverstorsProjectList from "../components/InvestorsProjectList";
+import GroupCaptive from "../components/GroupCaptive";
 
 export default function About() {
   return (
@@ -23,11 +24,12 @@ export default function About() {
         }}
       >
         {/* AboutCards is now above the animation */}
-        <AboutCards />
         <Services />
+        <AboutCards />
         <Solutions />
-        <SolutionsNew/>
+        {/* <SolutionsNew/> */}
         <DsunForYou />
+        <GroupCaptive />
         <ConsumerProjectList />
         <InverstorsProjectList />
         <WhatWeDo />

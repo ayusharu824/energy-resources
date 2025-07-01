@@ -1,9 +1,8 @@
 import { Box, Button, Container, Typography } from "@mui/material";
 import HeaderNew from "./HeaderNew"; // <-- Add this import
-import backgroundImage from "../assets/solarPanelDarkHR.png";
-import backgroundImage1 from "../assets/heroimage2.png";
-import backgroundImage2 from "../assets/heroimage3.png";
 import backgroundImage3 from "../assets/transparentHeroImgCropped.png";
+import greenHeroImage from "../assets/hero_green_img.jpg"; // Example image, replace with your own
+import greenEnergyIcon from "../assets/wind_hero_image.jpg"; // Example icon, replace with your own
 import "../styles/ContactForm.css"; // Import your CSS file
 const HomepageHero = () => {
   return (
@@ -18,7 +17,9 @@ const HomepageHero = () => {
           py: { xs: 6, md: 10 },
           maxHeight: "90vh",
           minHeight: "80vh",
-          backgroundColor: "#e8eefe", // soft pastel background
+          background: "linear-gradient(135deg, #f5fafd, #ffffff)",
+          position: "relative",
+          overflow: "hidden",
         }}
       >
         {/* Left Section */}
@@ -62,13 +63,14 @@ const HomepageHero = () => {
               py: 1.5,
               borderRadius: "8px",
               fontWeight: 600,
+              boxShadow: "0 4px 12px rgba(0, 200, 83, 0.3)",
             }}
           >
             Learn More
           </Button>
         </Box>
 
-        {/* Right Section - Illustration */}
+        {/* Right Section - Image with shadow and smooth scale */}
         <Box
           sx={{
             flex: 1,
@@ -77,15 +79,28 @@ const HomepageHero = () => {
             mt: { xs: 4, md: 0 },
           }}
         >
-          <img
-            src={backgroundImage3} // Replace with your illustration
+          <Box
+            component="img"
+            src={greenHeroImage}
             alt="Clean energy illustration"
-            style={{ maxWidth: "100%", height: "auto", maxHeight: "35rem",marginTop:"-4rem", borderRadius: "1rem" }}
+            sx={{
+              minWidth: "25rem",
+              maxWidth: "45rem",
+              maxHeight: "30rem",
+              marginTop: "8rem",
+              borderRadius: "1rem",
+              boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)",
+              transition: "transform 0.4s ease",
+              "&:hover": {
+                transform: "scale(1.03)",
+              },
+            }}
           />
         </Box>
       </Box>
     </>
   );
 };
+
 
 export default HomepageHero;

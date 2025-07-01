@@ -13,7 +13,7 @@ const AboutCards = () => {
         py: 10,
         mx: "auto",
         maxWidth: 1500,
-        backgroundColor: "#f5fafd",
+        backgroundColor: "#ffffff",
         margin: "0 0",
       }}
     >

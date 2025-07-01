@@ -6,9 +6,9 @@ const WhatWeDo = () => {
       <Box
         sx={{
           padding: "0 3%",
-          backgroundColor: "#eaf7ff",
+          backgroundColor: "#ffffff",
           minHeight: "26rem",
-          pt: { xs: 5, md: 6 }
+          pt: { xs: 5, md: 6 },
         }}
       >
         <Typography
@@ -50,35 +50,6 @@ const WhatWeDo = () => {
           Access, we make clean energy not only accessible but also
           affordable and scalable.
         </Typography>
-      <Box
-        sx={{
-          marginTop: "2rem",
-          display: "flex",
-          justifyContent: "left",
-          marginBottom: "2rem",
-          gap: 2,
-        }}
-      >
-        <Button
-          variant="contained"
-          size="large"
-          sx={{
-            textTransform: "none",
-            color: "#ffffff",
-            borderRadius: "1rem",
-          }}
-        >
-          Learn More
-        </Button>
-        <Button
-          variant="outlined"
-          color="primary"
-          size="large"
-          sx={{ textTransform: "none", borderRadius: "1rem" }}
-        >
-          Contact Us
-        </Button>
-      </Box>
       </Box>
     </>
   );

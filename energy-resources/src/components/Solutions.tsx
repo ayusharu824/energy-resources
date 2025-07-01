@@ -1,4 +1,4 @@
-import { Box, Typography, Grid } from "@mui/material";
+import { Box, Typography, Grid, Card, CardContent, CardMedia } from "@mui/material";
 import consumerImage from "../assets/windturbines.jpg"
 import developerImage from "../assets/greenbulb.jpg";
 import financiersImage from "../assets/solarpanels.jpg";
@@ -43,8 +43,7 @@ const data = [
 
 const Solutions = () => {
   return (
-    <>
-      <Box sx={{ margin: "0 0", backgroundColor: "#f0f7ff", py: 6 }}>
+      <Box sx={{ margin: "0 0", backgroundColor: "#ffffff", py: 6 }}>
         <Box sx={{ pl: { xs: 2, md: "2.2em" }, mb: 3 }}>
           <Typography
             variant="h4"
@@ -67,34 +66,43 @@ const Solutions = () => {
             }}
           />
         </Box>
-        <Box sx={{ margin: "0 5em" }}>
-          {data.map((item, index) => (
-            <Grid
-              container
-              spacing={4}
-              alignItems="center"
-              justifyContent="center"
-              key={item.title}
-              direction={index % 2 === 0 ? "row" : "row-reverse"}
-              sx={{ marginBottom: "4rem" }}
+       <Grid container spacing={4} sx={{ px: { xs: 2, md: 8 } , mt: "4rem" }}>
+        {data.map((item, index) => (
+          <Grid size={{ xs: 12, sm: 6, md: 4 }} key={item.title}>
+            <Card
+              sx={{
+                borderRadius: 4,
+                boxShadow: "0 2px 16px rgba(27,23,99,0.10)",
+                height: "100%",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "stretch",
+              }}
             >
-              <Grid size={{ xs: 12, md: 6 }}>
+              <CardMedia
+                component="img"
+                image={item.image}
+                alt={item.title}
+                sx={{
+                  height: 220,
+                  objectFit: "cover",
+                  borderTopLeftRadius: 16,
+                  borderTopRightRadius: 16,
+                }}
+              />
+              <CardContent>
                 <Typography
                   gutterBottom
                   variant="h6"
                   component="div"
-                  sx={{
-                    fontWeight: 600,
-                    textAlign: "left",
-                    marginBottom: "1rem",
-                  }}
+                  sx={{ fontWeight: 600, textAlign: "left" }}
                 >
                   {item.title}
                 </Typography>
                 <Typography
                   variant="body1"
                   color="textprimary"
-                  sx={{ lineHeight: 1.8, marginBottom: "1rem" }}
+                  sx={{ lineHeight: 1.8, mb: 1 }}
                 >
                   {item.text}
                 </Typography>
@@ -117,33 +125,17 @@ const Solutions = () => {
                   <Typography
                     variant="body1"
                     color="textprimary"
-                    sx={{ lineHeight: 1.8, marginBottom: "1rem" }}
+                    sx={{ lineHeight: 1.8 }}
                   >
                     {item.text2}
                   </Typography>
                 )}
-              </Grid>
-
-              <Grid size={{ xs: 12, md: 6 }}>
-                <Box>
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    style={{
-                      width: "70%",
-                      height: item.reduceHeight ? "20rem" : "auto",
-                      objectFit: item.reduceHeight ? "cover" : "initial",
-                      borderRadius: "12px",
-                      boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
-                    }}
-                  />
-                </Box>
-              </Grid>
-            </Grid>
-          ))}
-        </Box>
-      </Box>
-    </>
+              </CardContent>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
+    </Box>
   );
 };
 

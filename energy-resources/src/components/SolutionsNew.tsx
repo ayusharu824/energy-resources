@@ -12,7 +12,7 @@ const SolutionsNew = () => {
   const navigate = useNavigate();
   return (
     <>
-      <Box sx={{ mb: 6, mt: 8, backgroundColor: "#F5F9FF", py: 6 }}>
+      <Box sx={{ mb: 6, mt: 8, backgroundColor: "#ffffff", py: 6 }}>
         <Box sx={{ pl: { xs: 2, md: "2.2em" }, mb: 3 }}>
           <Typography
             variant="h4"

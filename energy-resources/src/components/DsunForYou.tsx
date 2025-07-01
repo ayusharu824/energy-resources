@@ -49,7 +49,7 @@ const gridData = [
 
 const DsunForYou = () => {
   return (
-    <Box sx={{backgroundColor: "#f0f7ff", py: 8 }}>
+    <Box sx={{backgroundColor: "#ffffff", py: 8 }}>
       <Box sx={{ pl: { xs: 2, md: "2.2em" }, mb: 3 }}>
         <Typography variant="h4" fontWeight={700} color="#1b1763" gutterBottom>
           D-Sun For You
