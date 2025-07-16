@@ -70,16 +70,16 @@ const SolutionsNew = () => {
                     office, data center, or logistics hub — we make your shift
                     to clean energy seamless and cost-effective.
                     <li>
-                      Join Group Captive communities across states under Open
-                      Access.
+                      <b>Access Verified Developers</b> offering solar rooftop, new,
+                      and readily available Open Access green energy projects.
                     </li>
                     <li>
-                      Connect with verified developers offering Group Captive
-                      and Third-Party models.
+                      <b>Join Group Captive Communities</b> across states to benefit
+                      from economies of scale and shared infrastructure.
                     </li>
                     <li>
-                      Access green financing to lower or eliminate upfront
-                      investment.
+                      <b>Explore Flexible Financial Models</b> that reduce or eliminate
+                      upfront capex through tailored green financing options.
                     </li>
                   </Box>
                 </div>

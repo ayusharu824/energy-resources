@@ -1,18 +1,12 @@
-import {
-  Box,
-  Typography,
-  Grid,
-  Card,
-  CardMedia,
-  Button,
-} from "@mui/material";
+import { Box, Typography, Grid, Card, CardMedia, Button, Fab } from "@mui/material";
 import windImg from "../assets/windEnergyType.jpg";
 import solarImg from "../assets/solarEnergyType.jpg";
 import hybridImg from "../assets/hybridEnergyType.png";
-import projectList from "../data/investorProjectList.json"
+import projectList from "../data/investorProjectList.json";
 import { useRef } from "react";
-import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import AddIcon from "@mui/icons-material/Add";
 function getImageForProject(energyType: string) {
   switch (energyType) {
     case "wind":
@@ -40,10 +34,23 @@ const InverstorsProjectList = () => {
   };
   return (
     <Box sx={{ backgroundColor: "#ffffff", py: 8 }}>
-      <Box sx={{ pl: { xs: 2, md: "2.2em" }, mb: 3 }}>
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          pl: { xs: 2, md: "2.2em" },
+        }}
+      >
         <Typography variant="h4" fontWeight={700} color="#1b1763" gutterBottom>
-          Instant Green Power: Investor-Ready Projects
+          Instant Green Power: Consumer-Ready Projects
         </Typography>
+      </Box>
+      <Box
+        sx={{
+          pl: { xs: 2, md: "2.2em" },
+          mb: 3,
+        }}
+      >
         <Box
           sx={{
             width: 64,

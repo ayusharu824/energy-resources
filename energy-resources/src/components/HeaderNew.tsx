@@ -8,7 +8,7 @@ import MenuItem from "@mui/material/MenuItem";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
-import mainLogo from "../assets/mainLogoLg.png";
+import mainLogo from "../assets/gem_logo.png";
 
 const navButtonStyle = {
   position: "relative",
@@ -81,14 +81,14 @@ const HeaderNew: React.FC = () => {
           <img
             src={mainLogo}
             alt="Logo"
-            width="140"
-            height="50"
-            style={{ marginTop: "1rem" }}
+            width="200"
+            height="40"
+            style={{ marginTop: "0rem" }}
           />
         </Link>
 
         {/* Desktop Navigation */}
-        <Box sx={{ display: { xs: "none", md: "flex" }, gap: 3 }}>
+        <Box sx={{ display: { xs: "none", md: "flex" }, gap: 3,color:"#0000FF" }}>
           <Button sx={navButtonStyle} onClick={handleMenuOpen("solutions")}>Solutions</Button>
           {renderMenu("solutions", ["Advisors", "Energy Buyers", "Developers", "Utilities"])}
 

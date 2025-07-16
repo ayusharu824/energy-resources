@@ -10,14 +10,13 @@ const AboutCards = () => {
       sx={{
         width: "100%",
         px: { xs: 2, md: 4 },
-        py: 10,
         mx: "auto",
         maxWidth: 1500,
         backgroundColor: "#ffffff",
         margin: "0 0",
       }}
     >
-      <Grid container spacing={4} alignItems="stretch">
+      <Grid container spacing={2} alignItems="stretch">
         {/* Animation Section */}
         <Grid size={{xs:12,md:6}}>
           <Box

@@ -5,6 +5,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import About from "./pages/About";
 import AboutNew from "./pages/AboutNew";
 import Consumers from "./pages/Consumers";
+import NewUsersList from "./components/NewUsersList";
 
 const theme = createTheme({
   palette: {
@@ -28,6 +29,7 @@ const App: React.FC = () => {
           <Route path="/about" element={<About />} />
           <Route path="/aboutnew" element={<AboutNew />} />
           <Route path="/consumers" element={<Consumers />} />
+          <Route path="/9080users0756" element={<NewUsersList />} />
           <Route path="*" element={<AboutNew />} />
         </Routes>
       </Router>

@@ -5,14 +5,18 @@ import {
   Card,
   CardMedia,
   Button,
+  Fab,
+  SelectChangeEvent,
 } from "@mui/material";
 import windImg from "../assets/windEnergyType.jpg";
 import solarImg from "../assets/solarEnergyType.jpg";
 import hybridImg from "../assets/hybridEnergyType.png";
 import projectList from "../data/consumerProjectList.json";
-import { useRef } from "react";
-import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { useRef, useState } from "react";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import AddIcon from "@mui/icons-material/Add";
+import AddProjectFormDialog from "./AddProjectFormDialog";
 function getImageForProject(energyType: string) {
   switch (energyType) {
     case "wind":
@@ -38,12 +42,61 @@ const ConsumerProjectList = () => {
       });
     }
   };
+
+  const [open, setOpen] = useState(false);
+  const [form, setForm] = useState({
+    name: "",
+    location: "",
+    capacity: "",
+    usageRemaining: "",
+    status: "",
+    avgUnitPrice: "",
+    closingWindowPhase1: "",
+    closingWindowPhase2: "",
+    energyType: "",
+  });
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
+  const handleChange = (
+    e: any
+  ) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+  const handleSelectChange = (event: SelectChangeEvent) => {
+    const { name, value } = event.target;
+    setForm((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+  const handleSubmit = (e: React.FormEvent) => {
+    handleClose();
+  };
+
   return (
     <Box sx={{ backgroundColor: "#ffffff", py: 8 }}>
-      <Box sx={{ pl: { xs: 2, md: "2.2em" }, mb: 3 }}>
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          pl: { xs: 2, md: "2.2em" },
+        }}
+      >
         <Typography variant="h4" fontWeight={700} color="#1b1763" gutterBottom>
           Instant Green Power: Consumer-Ready Projects
         </Typography>
+      </Box>
+      <Box
+        sx={{
+          pl: { xs: 2, md: "2.2em" },
+          mb: 3,
+        }}
+      >
         <Box
           sx={{
             width: 64,
@@ -217,6 +270,14 @@ const ConsumerProjectList = () => {
           <ArrowForwardIosIcon />
         </Button>
       </Box>
+      <AddProjectFormDialog
+        open={open}
+        form={form}
+        handleClose={handleClose}
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+        handleSelectChange={handleSelectChange}
+      />
     </Box>
   );
 };

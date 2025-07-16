@@ -1,106 +1,94 @@
-import { Box, Button, Container, Typography } from "@mui/material";
-import HeaderNew from "./HeaderNew"; // <-- Add this import
-import backgroundImage3 from "../assets/transparentHeroImgCropped.png";
-import greenHeroImage from "../assets/hero_green_img.jpg"; // Example image, replace with your own
-import greenEnergyIcon from "../assets/wind_hero_image.jpg"; // Example icon, replace with your own
-import "../styles/ContactForm.css"; // Import your CSS file
+import { Box, Button, Typography } from "@mui/material";
+import HeaderNew from "./HeaderNew";
+import greenHeroImage from "../assets/hero_green_img_1.jpg";
+import mainLogo from "../assets/mainLogo.png";
+import { Link } from "react-router-dom";
+
 const HomepageHero = () => {
   return (
     <>
-      <HeaderNew />
+      {/* <HeaderNew /> */}
       <Box
         sx={{
+          position: "relative",
+          minHeight: "90vh",
+          width: "100%",
           display: "flex",
           alignItems: "center",
-          justifyContent: "space-between",
-          px: { xs: 2, md: 8 },
+          justifyContent: "flex-start",
+          backgroundImage: `url(${greenHeroImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "30% 42%",
+          backgroundRepeat: "no-repeat",
+          px: { xs: 0, md: 0 },
           py: { xs: 6, md: 10 },
-          maxHeight: "90vh",
-          minHeight: "80vh",
-          background: "linear-gradient(135deg, #f5fafd, #ffffff)",
-          position: "relative",
-          overflow: "hidden",
+          //marginTop:"4.2em"
         }}
       >
-        {/* Left Section */}
-        <Box sx={{ flex: 1, pr: { md: 4 } }}>
+        <Box
+          sx={{
+            position: "absolute",
+            top: { xs: 16, md: 32 },
+            left: { xs: 16, md: 32 },
+            zIndex: 3,
+          }}
+        >
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <img
+              src={mainLogo}
+              alt="Logo"
+              width="110"
+              height="40"
+              style={{ marginTop: "-1.2rem", marginLeft: "-1rem" }}
+            />
+          </Link>
+        </Box>
+        <Box
+          sx={{
+            position: "relative",
+            zIndex: 2,
+            color: "#fff",
+            maxWidth: 600,
+            //textAlign: { xs: "center", md: "left" },
+            textAlign: "left",
+            //ml: { xs: 0, md: 4 },
+            pl: { xs: 2, md: 8 },
+          }}
+        >
           <Typography
             variant="overline"
-            sx={{ color: "#00C853", fontWeight: 600 }}
+            sx={{ color: "#f5c904", fontWeight: 600, letterSpacing: 2 }}
           >
             Energy For The Future
           </Typography>
-
           <Typography
-            variant="h3"
             component="h1"
             sx={{
               fontWeight: 700,
+              fontSize: { xs: "2.5rem", md: "2.14rem" },
               mb: 3,
-              color: "#2C3E50",
-              maxWidth: 500,
+              color: "#fff",
+              textShadow: "0 2px 16px rgba(0,0,0,0.25)",
             }}
           >
-            Smart, Clean Solar Energy Made Simple
+            Clean Energy, Smart Future, and Open Access Energy Made Simple
           </Typography>
-
-          <Typography sx={{ mb: 4, color: "#555", maxWidth: 480 }}>
-            D-Sun helps carbon-free energy buyers, sellers, and financiers
-            connect and get better deals—faster.
-          </Typography>
-
-          <Button
-            variant="contained"
-            size="large"
+          <Typography
             sx={{
-              backgroundColor: "#00C853",
-              "&:hover": {
-                backgroundColor: "#00B44C",
-              },
-              textTransform: "none",
-              fontSize: "1rem",
-              px: 4,
-              py: 1.5,
-              borderRadius: "8px",
-              fontWeight: 600,
-              boxShadow: "0 4px 12px rgba(0, 200, 83, 0.3)",
+              mb: 4,
+              color: "#fff",
+              fontSize: "1.2rem",
+              textShadow: "0 10rem 8px rgba(0,0,0,0.18)",
+              fontWeight: 500,
             }}
           >
-            Learn More
-          </Button>
-        </Box>
-
-        {/* Right Section - Image with shadow and smooth scale */}
-        <Box
-          sx={{
-            flex: 1,
-            display: "flex",
-            justifyContent: "flex-end",
-            mt: { xs: 4, md: 0 },
-          }}
-        >
-          <Box
-            component="img"
-            src={greenHeroImage}
-            alt="Clean energy illustration"
-            sx={{
-              minWidth: "25rem",
-              maxWidth: "45rem",
-              maxHeight: "30rem",
-              marginTop: "8rem",
-              borderRadius: "1rem",
-              boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)",
-              transition: "transform 0.4s ease",
-              "&:hover": {
-                transform: "scale(1.03)",
-              },
-            }}
-          />
+            GEM Energy Helps Green Energy Open Access C&I Buyers, Sellers and
+            Financiers Get Better Deal Done Faster.
+          </Typography>
         </Box>
       </Box>
     </>
   );
 };
-
 
 export default HomepageHero;

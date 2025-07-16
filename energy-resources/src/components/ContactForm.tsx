@@ -6,10 +6,9 @@ import {
   Button,
   Card,
   Divider,
+  colors,
 } from "@mui/material";
-import familyPhoto from "../assets/happyfamily.png"; // Replace with your image path
-import buisnessPhoto from "../assets/businessPeopleContactForm.png"; // Replace with your image path
-import buisnessPhoto2 from "../assets/businessPeopleContactForm2.png"; // Replace with your image path
+import buisnessPhoto2 from "../assets/GetInTouchTransparent.png"; // Replace with your image path
 
 const MultiStepForm = () => {
   return (
@@ -32,8 +31,7 @@ const MultiStepForm = () => {
             Add your infromation so that we can get in touch with you for better
             tomorrow.
           </Typography>
-          <Typography variant="body1" color="#e1bee7">
-          </Typography>
+          <Typography variant="body1" color="#e1bee7"></Typography>
         </Box>
 
         <Box>
@@ -74,37 +72,148 @@ const MultiStepForm = () => {
         <Card sx={{ p: 4, boxShadow: 3, borderRadius: 3 }}>
           <Grid container spacing={3}>
             <Grid size={{ xs: 12, md: 6 }}>
-              <TextField label="First Name" fullWidth />
+              <TextField
+                label="First Name"
+                fullWidth
+                required
+                InputLabelProps={{
+                  sx: {
+                    "& .MuiInputLabel-asterisk": {
+                      color: "red",
+                    },
+                  },
+                }}
+              />
             </Grid>
             <Grid size={{ xs: 12, md: 6 }}>
-              <TextField label="Last Name" fullWidth />
+              <TextField
+                label="Last Name"
+                fullWidth
+                required
+                InputLabelProps={{
+                  sx: {
+                    "& .MuiInputLabel-asterisk": {
+                      color: "red",
+                    },
+                  },
+                }}
+              />
             </Grid>
             <Grid size={{ xs: 12, md: 6 }}>
-              <TextField label="Email Address" fullWidth />
+              <TextField
+                label="Email Address"
+                fullWidth
+                required
+                InputLabelProps={{
+                  sx: {
+                    "& .MuiInputLabel-asterisk": {
+                      color: "red",
+                    },
+                  },
+                }}
+              />
             </Grid>
             <Grid size={{ xs: 12, md: 6 }}>
-              <TextField label="Contact Number" fullWidth />
+              <TextField
+                label="Contact Number"
+                fullWidth
+                required
+                InputLabelProps={{
+                  sx: {
+                    "& .MuiInputLabel-asterisk": {
+                      color: "red",
+                    },
+                  },
+                }}
+              />
             </Grid>
             <Grid size={{ xs: 12 }}>
-              <TextField label="Address Line 1" fullWidth />
+              <TextField
+                label="Address Line 1"
+                fullWidth
+                required
+                InputLabelProps={{
+                  sx: {
+                    "& .MuiInputLabel-asterisk": {
+                      color: "red",
+                    },
+                  },
+                }}
+              />
             </Grid>
             <Grid size={{ xs: 12, md: 6 }}>
-              <TextField label="City" fullWidth />
+              <TextField
+                label="City"
+                fullWidth
+                required
+                InputLabelProps={{
+                  sx: {
+                    "& .MuiInputLabel-asterisk": {
+                      color: "red",
+                    },
+                  },
+                }}
+              />
             </Grid>
             <Grid size={{ xs: 12, md: 3 }}>
-              <TextField label="State" fullWidth />
+              <TextField
+                label="State"
+                fullWidth
+                required
+                InputLabelProps={{
+                  sx: {
+                    "& .MuiInputLabel-asterisk": {
+                      color: "red",
+                    },
+                  },
+                }}
+              />
             </Grid>
             <Grid size={{ xs: 12, md: 3 }}>
-              <TextField label="Pin Code" fullWidth />
+              <TextField
+                label="Pin Code"
+                fullWidth
+                required
+                InputLabelProps={{
+                  sx: {
+                    "& .MuiInputLabel-asterisk": {
+                      color: "red",
+                    },
+                  },
+                }}
+              />
             </Grid>
             <Grid size={{ xs: 12 }}>
-              <TextField label="Your query" multiline fullWidth minRows={3}/>
+              <TextField
+                label="Your query"
+                multiline
+                fullWidth
+                minRows={3}
+                required
+                InputLabelProps={{
+                  sx: {
+                    "& .MuiInputLabel-asterisk": {
+                      color: "red",
+                    },
+                  },
+                }}
+              />
+            </Grid>
+            <Grid size={{ xs: 12 }}>
+              <Typography>
+                All fields with {" "}
+                <Typography component="span" sx={{ color: "red" }}>
+                  *
+                </Typography>{" "}
+               are required
+              </Typography>
             </Grid>
             <Grid size={{ xs: 12 }}>
               <Divider sx={{ my: 2 }} />
               <Button
                 variant="contained"
                 fullWidth
+                type="submit"
                 size="large"
                 sx={{
                   backgroundColor: "linear-gradient(180deg,0%, #81c784 100%)",

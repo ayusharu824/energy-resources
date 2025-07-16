@@ -1,6 +1,13 @@
-import { Box, Typography, Grid, Card, CardContent, CardMedia } from "@mui/material";
-import consumerImage from "../assets/windturbines.jpg"
-import developerImage from "../assets/greenbulb.jpg";
+import {
+  Box,
+  Typography,
+  Grid,
+  Card,
+  CardContent,
+  CardMedia,
+} from "@mui/material";
+import consumerImage from "../assets/cndIConsumer_1.jpg";
+import developerImage from "../assets/developerImage_1.png";
 import financiersImage from "../assets/solarpanels.jpg";
 
 const data = [
@@ -10,20 +17,43 @@ const data = [
     text: `Whether you're a factory, office, data center, or logistics hub — we make your shift to clean energy seamless and cost-effective.`,
     text2: `Switch to smarter, cheaper power — without disruption.`,
     list: [
-      "Join Group Captive communities across states under Open Access.",
-      "Connect with verified developers offering Group Captive and Third-Party models.",
-      "Access green financing to lower or eliminate upfront investment.",
+      {
+        bold: "Access Verified Developers",
+        rest: " offering solar rooftop, new, and readily available Open Access green energy projects.",
+      },
+      {
+        bold: "Join Group Captive Communities",
+        rest: " across states to benefit from economies of scale and shared infrastructure.",
+      },
+      {
+        bold: "Explore Flexible Financial Models",
+        rest: " that reduce or eliminate upfront capex through tailored green financing options.",
+      },
     ],
     reduceHeight: true,
   },
   {
-    title: "Developers",
+    title: "Renewable Energy Developers",
     image: developerImage,
-    text: `We connect renewable energy developers with a wide network of open access consumers across India.`,
+    text: `Unlock opportunities with our integrated services designed to connect renewable energy developers and investors with pre-qualified Open Access consumers across India.`,
+    text2: "Focus on building — we’ll handle the matchmaking.",
     list: [
-      "List Group Captive or Third-Party projects to attract ready buyers.",
-      "Accelerate group formation with pre-qualified C&I clients by discom.",
-      "Streamline financing and execution through verified leads and compliance support.",
+      {
+        bold: "List Your Projects -",
+        rest: " Whether under development, ready-to-commission, or operational, list your captive/group captive/third party projects to gain immediate visibility and traction.",
+      },
+      {
+        bold: "Reach Pre-Qualified C&I Clients -",
+        rest: " Connect with businesses already vetted for load, DISCOM approval, and financial viability, ensuring faster group formation and smoother onboarding.",
+      },
+      {
+        bold: "Attract Retail and Institutional Investors -",
+        rest: " Leverage our marketplace to secure funding support for land acquisition, infrastructure, and equity contribution in SPVs.",
+      },
+      {
+        bold: "Accelerate Your Go-to-Market -",
+        rest: " We bring you verified demand, financing partnerships, and end-to-end transaction support so you can focus on building high-quality renewable assets.",
+      },
     ],
     reduceHeight: true,
   },
@@ -33,9 +63,15 @@ const data = [
     text: `Get access to high-quality renewable energy projects with long-term C&I offtake.`,
     text2: `Fuel clean energy, earn strong returns.`,
     list: [
-      "Invest in Group Captive, Captive and Third-Party PPAs with stable returns.",
-      "Accelerate green adoption across industries and commercial users.",
-      "Partner with trusted developers for low-risk, impact-driven opportunities.",
+      {
+        bold:"",rest: "Invest in green energy open access and rooftop solar PPAs with stable returns.",
+      },
+      {
+        bold:"",rest: "Accelerate green adoption across industries and commercial users",
+      },
+      {
+        bold:"",rest: "Partner with trusted developers for low-risk, high IRR, and impact-driven opportunities.",
+      },
     ],
     reduceHeight: true,
   },
@@ -43,30 +79,30 @@ const data = [
 
 const Solutions = () => {
   return (
-      <Box sx={{ margin: "0 0", backgroundColor: "#ffffff", py: 6 }}>
-        <Box sx={{ pl: { xs: 2, md: "2.2em" }, mb: 3 }}>
-          <Typography
-            variant="h4"
-            component="h1"
-            fontWeight={700}
-            color="#1b1763"
-            textAlign="left"
-            sx={{ mb: 1 }}
-            gutterBottom
-          >
-            Our Solutions
-          </Typography>
-          <Box
-            sx={{
-              width: 64,
-              height: 6,
-              borderRadius: 3,
-              background: "linear-gradient(90deg, #1b1763 60%, #4fc3f7 100%)",
-              mt: 0.5,
-            }}
-          />
-        </Box>
-       <Grid container spacing={4} sx={{ px: { xs: 2, md: 8 } , mt: "4rem" }}>
+    <Box sx={{ margin: "0 0", backgroundColor: "#ffffff", py: 6 }}>
+      <Box sx={{ pl: { xs: 2, md: "2.2em" }, mb: 3 }}>
+        <Typography
+          variant="h4"
+          component="h1"
+          fontWeight={700}
+          color="#1b1763"
+          textAlign="left"
+          sx={{ mb: 1 }}
+          gutterBottom
+        >
+          Our Solutions
+        </Typography>
+        <Box
+          sx={{
+            width: 64,
+            height: 6,
+            borderRadius: 3,
+            background: "linear-gradient(90deg, #1b1763 60%, #4fc3f7 100%)",
+            mt: 0.5,
+          }}
+        />
+      </Box>
+      <Grid container spacing={4} sx={{ px: { xs: 2, md: 8 }, mt: "4rem" }}>
         {data.map((item, index) => (
           <Grid size={{ xs: 12, sm: 6, md: 4 }} key={item.title}>
             <Card
@@ -115,9 +151,24 @@ const Solutions = () => {
                 >
                   {item.list.map((point, idx) => (
                     <li key={idx}>
-                      <Typography variant="body2" color="textprimary">
-                        {point}
-                      </Typography>
+                      {typeof point === "object" ? (
+                        <Typography
+                          variant="body2"
+                          color="textprimary"
+                          component="span"
+                        >
+                          {point.bold ? (
+                            <span style={{ fontWeight: 700 }}>
+                              {point.bold}
+                            </span>
+                          ) : null}
+                          {point.rest}
+                        </Typography>
+                      ) : (
+                        <Typography variant="body2" color="textprimary">
+                          {point}
+                        </Typography>
+                      )}
                     </li>
                   ))}
                 </ul>
