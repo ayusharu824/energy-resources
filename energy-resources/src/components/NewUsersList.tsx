@@ -1,22 +1,56 @@
-import projectList from "../data/consumerProjectList.json";
+import { useEffect, useState } from "react";
 
 export default function NewUsersList() {
+  const [users, setUsers] = useState<any>([]);
+
+  const getUsersList = async () => {
+    try {
+      const res = await fetch(
+        "/.netlify/functions/getFromBlob",
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      const result = await res.json();
+      if (res.status === 200) {
+        setUsers(result);
+      }
+    } catch (error) {
+      console.error("Error fetching users list:", error);
+    }
+  };
+
+  useEffect(() => {
+    getUsersList();
+  }, []);
+  
   return (
     <div>
-      {projectList.projects.map((project) => (
-        <div key={project.id} style={{ marginBottom: "1.5rem", padding: "1rem", border: "1px solid #eee", borderRadius: "8px" }}>
-          <strong>{project.name}</strong>
-          <div>Location: {project.location}</div>
-          <div>Capacity: {project.capacity}</div>
-          <div>Status: {project.status}</div>
-          <div>Energy Type: {project.energyType}</div>
-          <div>Usage Remaining: {project.usageRemaining}</div>
-          <div>Phase 1 Close: {project.closingWindowPhase1}</div>
-          <div>Phase 2 Close: {project.closingWindowPhase2}</div>
-          <div>Avg Unit Price: ₹{project.avgUnitPrice}/kWh</div>
+      {users.map((user: any, index: number|string) => (
+        <div
+          key={user.key || index}
+          style={{
+            marginBottom: "1.5rem",
+            padding: "1rem",
+            border: "1px solid #eee",
+            borderRadius: "8px",
+          }}
+        >
+          <strong>
+            {user.data.firstName} {user.data.lastName}
+          </strong>
+          <div>Email: {user.data.email}</div>
+          <div>Contact: {user.data.contact}</div>
+          <div>Address: {user.data.address}</div>
+          <div>City: {user.data.city}</div>
+          <div>State: {user.data.state}</div>
+          <div>Pin: {user.data.pin}</div>
+          <div>Query: {user.data.query}</div>
         </div>
       ))}
     </div>
   );
 }
-

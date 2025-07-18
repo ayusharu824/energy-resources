@@ -59,6 +59,7 @@ const MultiStepForm = () => {
   const [snackbarSeverity, setSnackbarSeverity] = useState<
     "success" | "error" | "info" | "warning"
   >("success");
+
   const handleChange = (e: any) => {
     setForm({ ...form, [e.target.name]: e.target.value });
     setErrors({ ...errors, [e.target.name]: "" }); // Clear error on change
@@ -85,7 +86,7 @@ const MultiStepForm = () => {
     if (Object.keys(newErrors).length === 0) {
       try {
         const res = await fetch(
-          "http://localhost:8888/.netlify/functions/saveToBlob",
+          "/.netlify/functions/saveToBlob",
           {
             method: "POST",
             headers: {
