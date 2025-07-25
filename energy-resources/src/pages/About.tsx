@@ -10,6 +10,10 @@ import {
 import Header from "../components/Header";
 import { List, ListItem, ListItemIcon } from "@mui/material";
 import CompostOutlinedIcon from "@mui/icons-material/CompostOutlined";
+import SolarPowerIcon from "@mui/icons-material/SolarPower";
+import WindPowerIcon from "@mui/icons-material/WindPower";
+import backgroundImage from "../assets/greenbackground.jpg";
+import FloatingForm from "../components/FloatingForm";
 
 const itemData = [
   {
@@ -46,31 +50,61 @@ export default function About() {
         sx={{
           backgroundColor: "#F5F5F5",
           minHeight: "100vh",
-          padding: "2rem 0",
+          padding: "2rem 0"
         }}
       >
         {/* Hero Section */}
-        <Box
-          sx={{
-            backgroundColor: "#4CAF50",
-            color: "#FFFFFF",
-            padding: "4rem 2rem",
-            textAlign: "center",
-          }}
+        {/* About Us Section */}
+        <Container
+          maxWidth="lg"
+          sx={{ marginTop: "3rem", textAlign: "center" }}
         >
-          <Typography variant="h2" component="h1" gutterBottom>
+          <Typography
+            variant="h3"
+            component="h1"
+            fontWeight={600}
+            color="#1b1763"
+            gutterBottom
+          >
             About Us
           </Typography>
           <Typography
-            variant="h6"
-            component="p"
-            sx={{ maxWidth: "600px", margin: "0 auto" }}
+            variant="body1"
+            color="textSecondary"
+            sx={{ maxWidth: "800px", margin: "0 auto", lineHeight: 1.8 }}
           >
-            Empowering a sustainable future with innovative energy solutions.
-            Join us in making a difference.
+            At EnergySage, we are committed to empowering individuals and
+            businesses with sustainable energy solutions. Our mission is to
+            create a greener future by providing innovative tools, expert
+            advice, and resources to help you make informed energy decisions.
+            Together, we can build a cleaner, brighter tomorrow.
           </Typography>
-        </Box>
-
+          <Box
+            sx={{
+              marginTop: "2rem",
+              display: "flex",
+              justifyContent: "center",
+              gap: 2,
+            }}
+          >
+            <Button
+              variant="contained"
+              color="primary"
+              size="large"
+              sx={{ textTransform: "none" }}
+            >
+              Learn More
+            </Button>
+            <Button
+              variant="outlined"
+              color="primary"
+              size="large"
+              sx={{ textTransform: "none" }}
+            >
+              Contact Us
+            </Button>
+          </Box>
+        </Container>
         {/* Horizontal Scrollable Image Grid */}
         <Container maxWidth="xl" sx={{ marginTop: "3rem" }}>
           <Typography variant="h4" gutterBottom>
@@ -124,24 +158,23 @@ export default function About() {
           {/* Grid Layout */}
           <Grid container spacing={4} sx={{ marginTop: "2rem" }}>
             {/* Left Column: List */}
-            <Grid size={6} >
+            <Grid size={6}>
               {/* <Item> */}
               <List>
-                  <ListItem alignItems="flex-start">
-                    <ListItemIcon>
-                      <CompostOutlinedIcon color="success" fontSize="large" />
-                    </ListItemIcon>
-                    <Box>
-                      <Typography variant="h5" fontWeight={500}>
-                        Save money with renewable energy solutions
-                      </Typography>
-                      <Typography variant="body2" color="textSecondary">
-                        Discover how renewable energy can help you save on
-                        utility bills while contributing to a sustainable
-                        future.
-                      </Typography>
-                    </Box>
-                  </ListItem>
+                <ListItem alignItems="flex-start">
+                  <ListItemIcon>
+                    <SolarPowerIcon color="success" fontSize="large" />
+                  </ListItemIcon>
+                  <Box>
+                    <Typography variant="h5" fontWeight={500}>
+                      Save money with renewable energy solutions
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary">
+                      Discover how renewable energy can help you save on utility
+                      bills while contributing to a sustainable future.
+                    </Typography>
+                  </Box>
+                </ListItem>
 
                 <ListItem alignItems="flex-start">
                   <ListItemIcon>
@@ -160,7 +193,7 @@ export default function About() {
 
                 <ListItem alignItems="flex-start">
                   <ListItemIcon>
-                    <CompostOutlinedIcon color="success" fontSize="large" />
+                    <WindPowerIcon color="success" fontSize="large" />
                   </ListItemIcon>
                   <Box>
                     <Typography variant="h5" fontWeight={500}>
@@ -177,8 +210,7 @@ export default function About() {
             </Grid>
 
             {/* Right Column: Additional Content */}
-            <Grid size={6}>
-              {/* <Item> */}
+            <Grid size={{ xs: 6, md: 6 }}>
               <Box
                 sx={{
                   height: "100%",
@@ -187,16 +219,20 @@ export default function About() {
                   alignItems: "center",
                   backgroundColor: "#F5F5F5",
                   borderRadius: 2,
-                  boxShadow: 3,
+                  //boxShadow: 3,
                   padding: 2,
                 }}
               >
-                <Typography variant="h6" textAlign="center">
-                  Explore our resources to learn more about renewable energy and
-                  how it can transform your home and lifestyle.
-                </Typography>
+                <iframe
+                  width="100%"
+                  height="315"
+                  src="https://www.youtube.com/embed/E39neWnw9AA" // Replace with your YouTube video URL
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </Box>
-              {/* </Item> */}
             </Grid>
           </Grid>
         </Container>
@@ -218,6 +254,7 @@ export default function About() {
           >
             Get Started
           </Button>
+          <FloatingForm />
         </Box>
       </Box>
     </>
