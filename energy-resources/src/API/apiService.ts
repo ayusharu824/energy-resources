@@ -14,12 +14,11 @@ export async function AddUserDetails(userDetails: UserDetails) {
     throw new Error("Failed to submit form");
   }
 
-  //return res.json(); // or .text(), depending on your API
   return {
     statusCode: res.status,
     message: res.statusText,
     isSuccess: res.ok,
-    data: await res.json(), // Assuming the response is JSON
+    data: await res.json(),
   }
 }
 
@@ -37,5 +36,5 @@ export async function GetUserDetails() {
     message: res.statusText,
     isSuccess: res.ok,
     data: await res.json(), // Assuming the response is JSON
-  } // or .text(), depending on your API
+  }
 }
