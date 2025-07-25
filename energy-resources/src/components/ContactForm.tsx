@@ -11,46 +11,26 @@ import {
 } from "@mui/material";
 import buisnessPhoto2 from "../assets/GetInTouchTransparent.png"; // Replace with your image path
 import { useState } from "react";
-
-type FormFields = {
-  firstName: string;
-  lastName: string;
-  email: string;
-  contact: string;
-  address: string;
-  city: string;
-  state: string;
-  pin: string;
-  query: string;
-};
+import { UserDetails } from "../models/models";
+import { Add } from "@mui/icons-material";
+import { AddUserDetails } from "../API/apiService";
 
 const MultiStepForm = () => {
-  const [form, setForm] = useState({
+  const [form, setForm] = useState<UserDetails>({
     firstName: "",
     lastName: "",
     email: "",
-    contact: "",
+    companyName: "",
+    contactNumber: "",
     address: "",
     city: "",
     state: "",
-    pin: "",
-    query: "",
+    pinCode: "",
+    userQuery: "",
   });
 
-  type FormFields = {
-    firstName: string;
-    lastName: string;
-    email: string;
-    contact: string;
-    address: string;
-    city: string;
-    state: string;
-    pin: string;
-    query: string;
-  };
-
   type Errors = {
-    [K in keyof FormFields]?: string;
+    [K in keyof UserDetails]?: string;
   };
 
   const [errors, setErrors] = useState<Errors>({});
@@ -78,35 +58,32 @@ const MultiStepForm = () => {
     }
 
     const pinRegex = /^[1-9][0-9]{5}$/;
-    if (form.pin && !pinRegex.test(form.pin)) {
-      newErrors.pin = "Please enter a valid 6-digit pin code";
+    if (form.pinCode && !pinRegex.test(form.pinCode)) {
+      newErrors.pinCode = "Please enter a valid 6-digit pin code";
     }
 
     setErrors(newErrors);
     if (Object.keys(newErrors).length === 0) {
       try {
-        const res = await fetch(
-          "/.netlify/functions/saveToBlob",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(form),
-          }
-        );
-        const result = await res.json();
-        if (result.statusCode === 200) {
+        var response = await AddUserDetails(form);
+        console.log("Response from API:", response);
+        if (!response.isSuccess) {
+          setOpenSnackbar(true);
+          setSnackbarMessage("Error saving your details. Please try again.");
+          setSnackbarSeverity("error");
+        }
+        if (response.isSuccess) {
           setForm({
             firstName: "",
             lastName: "",
             email: "",
-            contact: "",
+            companyName: "",
+            contactNumber: "",
             address: "",
             city: "",
             state: "",
-            pin: "",
-            query: "",
+            pinCode: "",
+            userQuery: "",
           });
           setOpenSnackbar(true);
           setSnackbarMessage("Your details saved successfully with us!");
@@ -148,7 +125,12 @@ const MultiStepForm = () => {
             <img
               src={buisnessPhoto2} // Replace with your image path
               alt="Family Illustration"
-              style={{ width: "100%", maxWidth: "20rem" }}
+              style={{
+                width: "100%",
+                maxWidth: "23rem",
+                marginBottom: "5rem",
+                marginLeft: "2em",
+              }}
             />
           </Box>
         </Grid>
@@ -259,13 +241,38 @@ const MultiStepForm = () => {
               <Grid size={{ xs: 12, md: 6 }}>
                 <TextField
                   label="Contact Number"
-                  name="contact"
+                  name="contactNumber"
                   type="number"
-                  value={form.contact}
+                  value={form.contactNumber}
                   onChange={handleChange}
-                  error={!!errors.contact}
-                  helperText={errors.contact}
+                  error={!!errors.contactNumber}
+                  helperText={errors.contactNumber}
                   fullWidth
+                  required
+                  InputLabelProps={{
+                    sx: {
+                      "& .MuiInputLabel-asterisk": {
+                        color: "red",
+                      },
+                    },
+                  }}
+                  FormHelperTextProps={{
+                    sx: {
+                      textAlign: "left",
+                      ml: "0rem", // adjust as needed
+                    },
+                  }}
+                />
+              </Grid>
+              <Grid size={{ xs: 12 }}>
+                <TextField
+                  label="CompanyName"
+                  fullWidth
+                  name="companyName"
+                  value={form.companyName}
+                  onChange={handleChange}
+                  error={!!errors.companyName}
+                  helperText={errors.companyName}
                   required
                   InputLabelProps={{
                     sx: {
@@ -361,11 +368,11 @@ const MultiStepForm = () => {
                 <TextField
                   label="Pin Code"
                   fullWidth
-                  name="pin"
-                  value={form.pin}
+                  name="pinCode"
+                  value={form.pinCode}
                   onChange={handleChange}
-                  error={!!errors.pin}
-                  helperText={errors.pin}
+                  error={!!errors.pinCode}
+                  helperText={errors.pinCode}
                   required
                   InputLabelProps={{
                     sx: {
@@ -387,11 +394,11 @@ const MultiStepForm = () => {
                   label="Your query"
                   multiline
                   fullWidth
-                  name="query"
-                  value={form.query}
+                  name="userQuery"
+                  value={form.userQuery}
                   onChange={handleChange}
-                  error={!!errors.query}
-                  helperText={errors.query}
+                  error={!!errors.userQuery}
+                  helperText={errors.userQuery}
                   minRows={3}
                   required
                   InputLabelProps={{

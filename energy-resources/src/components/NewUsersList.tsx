@@ -1,23 +1,16 @@
 import { useEffect, useState } from "react";
+import { GetUserDetails } from "../API/apiService";
 
 export default function NewUsersList() {
   const [users, setUsers] = useState<any>([]);
 
   const getUsersList = async () => {
     try {
-      const res = await fetch(
-        "/.netlify/functions/getFromBlob",
-        {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      const result = await res.json();
-      if (res.status === 200) {
-        setUsers(result);
+      var response = await GetUserDetails();
+      if(response.isSuccess){
+        setUsers(response.data);
       }
+      console.log(response);
     } catch (error) {
       console.error("Error fetching users list:", error);
     }
@@ -40,15 +33,16 @@ export default function NewUsersList() {
           }}
         >
           <strong>
-            {user.data.firstName} {user.data.lastName}
+            {user.firstName} {user.lastName}
           </strong>
-          <div>Email: {user.data.email}</div>
-          <div>Contact: {user.data.contact}</div>
-          <div>Address: {user.data.address}</div>
-          <div>City: {user.data.city}</div>
-          <div>State: {user.data.state}</div>
-          <div>Pin: {user.data.pin}</div>
-          <div>Query: {user.data.query}</div>
+          <div>Email: {user.email}</div>
+          <div>Company Name: {user.companyName}</div>
+          <div>Contact: {user.contactNumber}</div>
+          <div>Address: {user.address}</div>
+          <div>City: {user.city}</div>
+          <div>State: {user.state}</div>
+          <div>Pin: {user.pinCode}</div>
+          <div>Query: {user.userQuery}</div>
         </div>
       ))}
     </div>
