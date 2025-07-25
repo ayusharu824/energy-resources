@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import greenHeroImage from "../assets/hero_green_img_1.jpg";
+import greenHeroImage from "../assets/hero_green_img_1.avif";
 import mainLogo from "../assets/mainLogo.png";
 import { Link } from "react-router-dom";
 

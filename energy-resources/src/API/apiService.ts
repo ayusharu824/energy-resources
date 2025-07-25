@@ -2,7 +2,7 @@ import { UserDetails } from "../models/models";
 
 // src/api/api.ts
 const BASE_URL = process.env.REACT_APP_FUNCTION_URL!;
-//const BASE_URL = "http://localhost:7172/api";
+
 export async function AddUserDetails(userDetails: UserDetails) {
     debugger;
   const res = await fetch(`${BASE_URL}/AddUserDetails`, {
