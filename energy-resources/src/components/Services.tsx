@@ -1,8 +1,4 @@
-import { Box, Card, Typography, Grid } from "@mui/material";
-import icon1 from "../assets/asset2.png";
-import icon2 from "../assets/asset6.png";
-import animationData from "../assets/lottiesAnimationJson.json";
-import Lottie from "lottie-react";
+import { Box, Typography, Grid } from "@mui/material";
 
 const AboutCards = () => {
   return (

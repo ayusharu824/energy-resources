@@ -1,12 +1,10 @@
-import { Box, Typography, Button } from "@mui/material";
-import HeaderNew from "../components/HeaderNew";
+import { Box } from "@mui/material";
 import HomepageHero from "../components/HomepageHero";
 import ContactForm from "../components/ContactForm";
 import AboutCards from "../components/AboutCards";
 import Solutions from "../components/Solutions";
 import WhatWeDo from "../components/WhatWeDo";
 import Services from "../components/Services";
-import SolutionsNew from "../components/SolutionsNew";
 import DsunForYou from "../components/DsunForYou";
 import ConsumerProjectList from "../components/ConsumerProjectList";
 import InverstorsProjectList from "../components/InvestorsProjectList";

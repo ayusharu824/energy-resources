@@ -1,4 +1,4 @@
-import { Box, Typography, Grid, Card, CardMedia, Button, Fab } from "@mui/material";
+import { Box, Typography, Grid, Card, CardMedia, Button } from "@mui/material";
 import windImg from "../assets/windEnergyType.jpg";
 import solarImg from "../assets/solarEnergyType.jpg";
 import hybridImg from "../assets/hybridEnergyType.png";
@@ -6,7 +6,7 @@ import projectList from "../data/investorProjectList.json";
 import { useRef } from "react";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import AddIcon from "@mui/icons-material/Add";
+
 function getImageForProject(energyType: string) {
   switch (energyType) {
     case "wind":

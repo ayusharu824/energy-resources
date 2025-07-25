@@ -1,10 +1,9 @@
-import { Box, Typography, Grid } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import DsunForYouIcon2 from "../assets/DsunForYouIcon1.png";
 import DsunForYouIcon1 from "../assets/DsunForYouIcon2.png";
 import DsunForYouIcon4 from "../assets/DsunForYouIcon3.png";
 import DsunForYouIcon3 from "../assets/DsunForYouIcon4.png";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import React from "react";
 
 const gridData = [

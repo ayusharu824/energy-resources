@@ -1,5 +1,4 @@
-import { Box, Button, Typography } from "@mui/material";
-import HeaderNew from "./HeaderNew";
+import { Box, Typography } from "@mui/material";
 import greenHeroImage from "../assets/hero_green_img_1.jpg";
 import mainLogo from "../assets/mainLogo.png";
 import { Link } from "react-router-dom";

@@ -12,7 +12,6 @@ import {
 import buisnessPhoto2 from "../assets/GetInTouchTransparent.png"; // Replace with your image path
 import { useState } from "react";
 import { UserDetails } from "../models/models";
-import { Add } from "@mui/icons-material";
 import { AddUserDetails } from "../API/apiService";
 
 const MultiStepForm = () => {

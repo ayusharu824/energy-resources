@@ -5,7 +5,6 @@ import {
   Card,
   CardMedia,
   Button,
-  Fab,
   SelectChangeEvent,
 } from "@mui/material";
 import windImg from "../assets/windEnergyType.jpg";
@@ -15,7 +14,6 @@ import projectList from "../data/consumerProjectList.json";
 import { useRef, useState } from "react";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import AddIcon from "@mui/icons-material/Add";
 import AddProjectFormDialog from "./AddProjectFormDialog";
 function getImageForProject(energyType: string) {
   switch (energyType) {
@@ -56,9 +54,6 @@ const ConsumerProjectList = () => {
     energyType: "",
   });
 
-  const handleOpen = () => {
-    setOpen(true);
-  };
   const handleClose = () => {
     setOpen(false);
   };

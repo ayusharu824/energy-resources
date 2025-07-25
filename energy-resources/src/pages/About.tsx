@@ -1,8 +1,6 @@
 import {
   Box,
   Typography,
-  ImageList,
-  ImageListItem,
   Button,
   Container,
   Grid,
@@ -12,7 +10,6 @@ import { List, ListItem, ListItemIcon } from "@mui/material";
 import CompostOutlinedIcon from "@mui/icons-material/CompostOutlined";
 import SolarPowerIcon from "@mui/icons-material/SolarPower";
 import WindPowerIcon from "@mui/icons-material/WindPower";
-import backgroundImage from "../assets/greenbackground.jpg";
 import FloatingForm from "../components/FloatingForm";
 
 const itemData = [
